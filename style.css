@@ -13,6 +13,7 @@
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Lobster', cursive;
     --border-seprator: 1px solid rgb(224, 224, 224);
+    --color-gradient: linear-gradient(68.4deg, rgb(34, 0, 255), rgb(22, 2, 91) 100.2%);
 }
 
 a {
@@ -165,6 +166,13 @@ header {
     bottom: 35px;
     left: 0;
     right: 0;
+}
+
+.gradient-bg {
+    background-image: var(--color-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 @media only screen and (min-width:768px) {
