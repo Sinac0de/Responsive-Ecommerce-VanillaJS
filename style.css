@@ -95,8 +95,13 @@ header {
 .nav-item {
     position: relative;
     font-size: 1.3rem;
-    width: fit-content;
+    width: 100%;
 }
+
+.nav-link {
+    display: block;
+}
+
 
 .nav-cart-link {
     width: 100%;
@@ -119,7 +124,7 @@ header {
 
 .nav-item:hover::before {
     content: '';
-    width: 60%;
+    width: 13%;
     bottom: -2px;
     height: 2px;
     background-color: var(--color-nav-underline);
@@ -128,7 +133,7 @@ header {
 
 .active-nav-item::before {
     content: '';
-    width: 60%;
+    width: 13%;
     height: 2px;
     background-color: var(--color-nav-underline);
     position: absolute;
