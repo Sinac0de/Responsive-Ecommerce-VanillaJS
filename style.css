@@ -165,7 +165,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 89vh;
+    height: 83vh;
     padding: 1em;
     text-align: center;
 }
