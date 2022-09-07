@@ -14,12 +14,14 @@ sidebarOpener.addEventListener("click", openSidebar);
 function openSidebar() {
     sidebarBackdrop.style.display = "block";
     sidebar.style.transform = "translateX(0)";
-    body.style.position = "fixed";
+    body.style.height = "100vh";
+    body.style.overflowY = "hidden";
 }
 
 //hide sidebar
 function closeSidebar() {
     sidebarBackdrop.style.display = "none";
     sidebar.style.transform = "translateX(100%)";
-    body.style.position = "unset";
+    body.style.height = "unset";
+    body.style.overflowY = "unset";
 }
