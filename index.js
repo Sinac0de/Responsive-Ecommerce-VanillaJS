@@ -1,7 +1,8 @@
 const sidebar = document.querySelector(".nav-items");
 const sidebarOpener = document.querySelector(".sidebar-opener");
 const sidebarCloser = document.querySelector(".sidebar-closer");
-const sidebarBackdrop = document.querySelector(".sidebar-backdrop")
+const sidebarBackdrop = document.querySelector(".sidebar-backdrop");
+const body = document.body;
 
 sidebarOpener.addEventListener("click", openSidebar);
 
@@ -13,10 +14,12 @@ sidebarOpener.addEventListener("click", openSidebar);
 function openSidebar() {
     sidebarBackdrop.style.display = "block";
     sidebar.style.transform = "translateX(0)";
+    body.style.position = "fixed";
 }
 
 //hide sidebar
 function closeSidebar() {
     sidebarBackdrop.style.display = "none";
     sidebar.style.transform = "translateX(100%)";
+    body.style.position = "unset";
 }
