@@ -14,6 +14,7 @@
     --font-secondary: 'Lobster', cursive;
     --border-seprator: 1px solid rgb(224, 224, 224);
     --color-gradient: linear-gradient(68.4deg, rgb(34, 0, 255), rgb(22, 2, 91) 100.2%);
+    --border-radius-btns: 0.5em;
 }
 
 a {
@@ -31,21 +32,58 @@ header {
     right: 0;
     left: 0;
     position: relative;
+    padding: 0.5em;
 }
 
-.nav-toggle {
+.sidebar-opener,
+.sidebar-closer {
     margin-right: 1em;
     font-size: 1.5rem;
     position: absolute;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0.5em;
+}
+
+.sidebar-opener {
     right: 0;
+}
+
+.sidebar-closer {
+    top: 0.2em;
+    font-size: 2.8rem;
+    left: 0.2em;
+}
+
+.sidebar-backdrop {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .nav-items {
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
     list-style-type: none;
-    gap: 1.5em;
+    gap: 1.8em;
+    padding: 6em 1.5em;
+    background-color: #F3F3F3;
+    height: 100vh;
+    width: 60%;
+    transform: translateX(100%);
+    transition: all 0.5s;
+    z-index: 999;
     font-size: 1.3rem;
-    display: none;
 }
 
 .nav-logo {
@@ -57,6 +95,15 @@ header {
 .nav-item {
     position: relative;
     font-size: 1.3rem;
+    width: fit-content;
+}
+
+.nav-cart-link {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: var(--border-radius-btns);
+    padding: 1em;
+    text-align: center;
 }
 
 .nav-item::before {
@@ -144,7 +191,7 @@ header {
     outline: none;
     background-color: transparent;
     padding: 1em 4em;
-    border-radius: 0.5em;
+    border-radius: var(--border-radius-btns);
     font-family: var(--font-primary);
     cursor: pointer;
 }
@@ -159,13 +206,6 @@ header {
 
 .hero-statics {
     display: none;
-}
-
-.hero-go-down {
-    position: absolute;
-    bottom: 35px;
-    left: 0;
-    right: 0;
 }
 
 .gradient-bg {
