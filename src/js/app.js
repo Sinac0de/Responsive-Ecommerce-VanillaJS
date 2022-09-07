@@ -1,3 +1,5 @@
+import '../css/style.css';
+
 const sidebar = document.querySelector(".nav-items");
 const sidebarOpener = document.querySelector(".sidebar-opener");
 const sidebarCloser = document.querySelector(".sidebar-closer");
