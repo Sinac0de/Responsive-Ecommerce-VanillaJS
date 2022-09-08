@@ -319,7 +319,6 @@ header {
     width: 90%;
     display: flex;
     /* max-width: 90%; */
-    overflow: hidden;
     overflow-x: scroll;
     gap: 1.5em;
     margin: 0 auto;
@@ -428,13 +427,13 @@ header {
 
 
 /*-----------------------------
- Home Call To Action styles
+    Home banners styles
  ------------------------------*/
 
-#call-to-action {
+#banner {
     margin: 1em 0;
     height: 40vh;
-    background-image: url('images/call-to-action.jpg');
+    background-image: url('images/banners/bannerOne.jpg');
     background-position: center;
     background-size: cover;
     padding: 2em;
@@ -442,7 +441,7 @@ header {
     z-index: 0;
 }
 
-#call-to-action::before {
+#banner::before {
     content: '';
     width: 100%;
     height: 100%;
@@ -453,7 +452,7 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.cta-info {
+.banner-info {
     height: 100%;
     color: white;
     position: relative;
@@ -465,24 +464,24 @@ header {
     justify-content: space-evenly;
 }
 
-.cta-info h4 {
+.banner-info h4 {
     text-align: center;
     font-family: var(--font-secondary);
     color: white;
     font-size: 1.5rem;
 }
 
-.cta-info h2 {
+.banner-info h2 {
     font-size: 1.6rem;
     font-weight: bold;
 }
 
-.cta-info h2 span {
+.banner-info h2 span {
     color: red;
     text-transform: uppercase;
 }
 
-.cta-info button {
+.banner-info button {
     background-color: white;
     font-weight: bold;
     color: black;
@@ -490,10 +489,103 @@ header {
     transition: all 0.3s;
 }
 
-.cta-info button:hover {
+.banner-info button:hover {
     background-color: black;
     color: white;
     text-transform: uppercase;
+}
+
+/* multiple banners */
+
+#multiple-banners {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    padding: 1em;
+}
+
+.sm-banner {
+    height: 40vh;
+    background-position: center;
+    background-size: 100%;
+    padding: 2em;
+    position: relative;
+    z-index: 0;
+    transition: all 0.6s;
+}
+
+.sm-banner:hover {
+    background-size: 105%;
+}
+
+.sm-banner::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.sm-banner:hover::before {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sm-banner-info {
+    position: relative;
+    color: white;
+    z-index: 99;
+}
+
+.sm-banner-info .btn {
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.sm-banner .btn {
+    border: 1px solid white;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.sm-banner .btn:hover {
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+}
+
+.sm-banner:nth-child(1) {
+    background-image: url('images/banners/bannerOne.jpg');
+    grid-area: one;
+}
+
+.sm-banner:nth-child(2) {
+    grid-area: two;
+    background-image: url('images/banners/bannerTwo.jpg');
+}
+
+.sm-banner:nth-child(3) {
+    grid-area: three;
+    background-image: url('images/banners/bannerThree.jpg');
+
+}
+
+.sm-banner:nth-child(4) {
+    grid-area: four;
+    background-image: url('images/banners/bannerFour.jpg');
+
+}
+
+.sm-banner:nth-child(5) {
+    grid-area: five;
+    background-image: url('images/banners/bannerFive.jpg');
+
 }
 
 /*-----------------------------
@@ -506,6 +598,102 @@ header {
     padding: 1em;
     margin: 1em 0;
 }
+
+/*-----------------------------
+    Footer styles
+ ------------------------------*/
+
+footer {
+    background-color: rgb(27, 25, 48);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em 2em;
+    line-height: 1.2em;
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    color: white;
+    font-family: var(--font-secondary);
+}
+
+.footer-col {
+    margin: 0.5em 0;
+}
+
+.footer-col h3 {
+    margin: 1em 0;
+}
+
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    /* gap: 0.5em; */
+}
+
+.footer-socials a,
+.footer-col a {
+    color: white;
+}
+
+.footer-col a {
+    padding: 0.5em;
+    transition: all 0.3s;
+}
+
+.footer-col a:hover {
+    color: rgb(140, 140, 140);
+}
+
+#facebook:hover {
+    color: #4267B2;
+}
+
+#twitter:hover {
+    color: #1DA1F2;
+}
+
+#instagram:hover {
+    color: #C13584;
+}
+
+#pinterest:hover {
+    color: #E60023;
+}
+
+#youtube:hover {
+    color: #FF0000;
+}
+
+#install-app .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 1em;
+    width: 100%;
+    margin: 1em 0;
+    border: 1px solid white;
+}
+
+#install-app .btn:hover {
+    background-color: white;
+}
+
+.credit {
+    line-height: 1.5;
+}
+
+.credit a {
+    color: white;
+}
+
 
 
 @media only screen and (min-width:768px) {
@@ -632,5 +820,18 @@ header {
         color: white;
         font-weight: bold;
         margin-top: 1em;
+    }
+
+    #multiple-banners {
+        display: grid;
+        grid-template-areas: "one one one two two two"
+            "one one one two two two"
+            "three four four four four five"
+            "three four four four four five"
+        ;
+        gap: 1em;
+        padding: 0 3em;
+        width: 100%;
+        margin: 1em;
     }
 }
