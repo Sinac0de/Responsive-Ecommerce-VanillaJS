@@ -508,7 +508,7 @@ header {
 .sm-banner {
     height: 40vh;
     background-position: center;
-    background-size: 100%;
+    background-size: 145%;
     padding: 2em;
     position: relative;
     z-index: 0;
@@ -516,7 +516,7 @@ header {
 }
 
 .sm-banner:hover {
-    background-size: 105%;
+    background-size: 150%;
 }
 
 .sm-banner::before {
