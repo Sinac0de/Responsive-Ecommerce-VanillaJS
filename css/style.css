@@ -1,26 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Roboto:wght@100;300;400;700&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&family=Lobster&family=Poppins:wght@100;300;400;700&display=swap');
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
     --color-primary: #F3F3F3;
     --color-secondary: rgb(27, 25, 48);
     --color-nav-underline: black;
-    --font-primary: 'Raleway', sans-serif;
-    --font-secondary: 'Lobster', cursive;
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+    --font-fantasy: 'Lobster', cursive;
     --border-seprator: 1px solid rgb(224, 224, 224);
     --color-gradient-primary: linear-gradient(68.4deg, rgb(34, 0, 255), rgb(22, 2, 91) 100.2%);
-    --border-radius-btns: 0.5em;
-    --font-size-small: 0.8rem;
-    --font-size-large: 1.2rem;
+    --border-radius: 0.5em;
+    --font-p-small: 0.8rem;
+    --font-h-small: 1.2rem;
+    --font-size-regular: 1rem;
 }
 
 body {
     font-family: var(--font-primary);
+    overflow-x: hidden;
+    font-size: var(--font-p-small);
 }
 
 a {
@@ -56,8 +62,7 @@ header {
 
 .sidebar-opener,
 .sidebar-closer {
-    margin-right: 1em;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     position: absolute;
     border: none;
     outline: none;
@@ -67,13 +72,14 @@ header {
 }
 
 .sidebar-opener {
-    right: 0;
+    right: 0.8em;
+
 }
 
 .sidebar-closer {
     top: 0.2em;
-    font-size: 2.8rem;
-    left: 0.2em;
+    font-size: 2.2rem;
+    left: 0.5em;
 }
 
 .sidebar-backdrop {
@@ -105,14 +111,14 @@ header {
 }
 
 .nav-logo {
-    font-family: var(--font-secondary);
+    font-family: var(--font-fantasy);
     font-size: 2rem;
     margin-left: .5em;
 }
 
 .nav-item {
     position: relative;
-    font-size: 1.3rem;
+    font-size: var(--font-h-small);
     width: 100%;
     margin: 0.8em 0.5em;
 }
@@ -136,9 +142,9 @@ header {
 .nav-btn {
     width: 90%;
     border: 2px solid black;
-    border-radius: var(--border-radius-btns);
+    border-radius: var(--border-radius);
     padding: 1em;
-    font-size: 1rem;
+    font-size: var(--font-size-regular);
     font-weight: bold;
     text-align: center;
 }
@@ -187,9 +193,9 @@ header {
 #hero h4 {
     color: gray;
     font-size: 1.2rem;
-    font-family: var(--font-secondary);
+    font-family: var(--font-fantasy);
     margin: .5em 0;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 #hero h1 {
@@ -230,17 +236,19 @@ header {
     outline: none;
     background-color: transparent;
     padding: 1em 4em;
-    border-radius: var(--border-radius-btns);
+    border-radius: var(--border-radius);
     font-family: var(--font-primary);
     cursor: pointer;
 }
 
-.hero-info button {
+.hero-info .btn {
     background-color: black;
     color: white;
     font-weight: bold;
+    display: inline-block;
     margin-top: 1em;
-    width: 100%;
+    width: fit-content;
+    font-size: var(--font-p-small);
 }
 
 .hero-statics {
@@ -283,7 +291,7 @@ header {
 }
 
 .feature p {
-    font-size: var(--font-size-small);
+    font-size: var(--font-p-small);
 }
 
 .feature-icon {
@@ -292,6 +300,7 @@ header {
 
 .feature-header {
     margin-bottom: 0.5em;
+    font-size: var(--font-h-small);
 }
 
 
@@ -306,16 +315,6 @@ header {
     margin: 1em 0;
 }
 
-/* .featured-products {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5em;
-    margin: 0 auto;
-    margin-top: 1em;
-    padding: 1em;
-} */
 
 /*-----------------------------
     Slider Products styles
@@ -367,7 +366,7 @@ header {
 }
 
 .product-brand {
-    font-size: 1.3rem;
+    font-size: var(--font-h-small);
 }
 
 .product-img {
@@ -375,6 +374,12 @@ header {
     height: 65%;
     object-fit: contain;
     border-radius: 10px;
+    border: none;
+    background-color: gray;
+}
+
+.product-title {
+    font-size: var(--font-size-regular);
 }
 
 .product-description {
@@ -386,8 +391,9 @@ header {
     line-height: 1.4rem;
 }
 
+
 .product-price {
-    font-size: 1.2rem;
+    font-size: var(--font-h-small);
 }
 
 .add-to-cart-btn {
@@ -455,7 +461,7 @@ header {
 
 .banner-info h4 {
     text-align: center;
-    font-family: var(--font-secondary);
+    font-family: var(--font-fantasy);
     color: white;
     font-size: 1.5rem;
 }
@@ -463,6 +469,7 @@ header {
 .banner-info h2 {
     font-size: 1.6rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .banner-info h2 span {
@@ -471,16 +478,16 @@ header {
 }
 
 .banner-info button {
-    background-color: white;
+    border: 1px solid white;
     font-weight: bold;
-    color: black;
+    color: white;
     text-transform: uppercase;
     transition: all 0.3s;
 }
 
 .banner-info button:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     text-transform: uppercase;
 }
 
@@ -498,15 +505,12 @@ header {
     height: 40vh;
     background-position: center;
     background-size: 145%;
-    padding: 2em;
     position: relative;
     z-index: 0;
     transition: all 0.6s;
+    overflow: hidden;
 }
 
-.sm-banner:hover {
-    background-size: 150%;
-}
 
 .sm-banner::before {
     content: '';
@@ -524,10 +528,31 @@ header {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.sm-banner img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -10;
+    transition: all 0.5s;
+}
+
+.sm-banner:hover img {
+    width: 105%;
+    height: 105%;
+}
+
+
 .sm-banner-info {
     position: relative;
     color: white;
     z-index: 99;
+    padding: 2em;
+}
+
+.sm-banner-info h4 {
+    font-family: var(--font-fantasy);
+    font-size: var(--font-size-regular);
 }
 
 .sm-banner-info .btn {
@@ -550,30 +575,25 @@ header {
 }
 
 .sm-banner:nth-child(1) {
-    background-image: url('/images/banners/bannerSix.jpg');
     grid-area: one;
 }
 
 .sm-banner:nth-child(2) {
     grid-area: two;
-    background-image: url('/images/banners/bannerTwo.jpg');
 }
 
 .sm-banner:nth-child(3) {
     grid-area: three;
-    background-image: url('/images/banners/bannerThree.jpg');
 
 }
 
 .sm-banner:nth-child(4) {
     grid-area: four;
-    background-image: url('/images/banners/bannerFour.jpg');
 
 }
 
 .sm-banner:nth-child(5) {
     grid-area: five;
-    background-image: url('/images/banners/bannerFive.jpg');
 
 }
 
@@ -607,7 +627,7 @@ footer {
     font-size: 1.5rem;
     margin-bottom: 1em;
     color: white;
-    font-family: var(--font-secondary);
+    font-family: var(--font-fantasy);
 }
 
 .footer-col {
@@ -634,10 +654,11 @@ footer {
 .footer-col a {
     padding: 0.5em;
     transition: all 0.3s;
+    opacity: 0.5;
 }
 
 .footer-col a:hover {
-    color: rgb(140, 140, 140);
+    opacity: 1;
 }
 
 #facebook:hover {
@@ -673,6 +694,7 @@ footer {
 
 #install-app .btn:hover {
     background-color: white;
+    color: gray;
 }
 
 .credit {
@@ -910,10 +932,6 @@ main {
 }
 
 .type-btn {
-    transition: all 0.3s;
-}
-
-.type-btn {
     border: 1px solid white;
     color: black;
     text-decoration: none;
@@ -921,6 +939,8 @@ main {
     text-align: center;
     padding: 0.5em;
     cursor: pointer;
+    transition: all 0.3s;
+    font-size: var(--font-p-small);
 }
 
 .active-type {
