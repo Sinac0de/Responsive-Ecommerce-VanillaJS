@@ -8,7 +8,7 @@
 
 :root {
     --color-primary: #F3F3F3;
-    --color-secondary: rgb(204, 31, 0);
+    --color-secondary: rgb(27, 25, 48);
     --color-nav-underline: black;
     --font-primary: 'Raleway', sans-serif;
     --font-secondary: 'Lobster', cursive;
@@ -27,6 +27,12 @@ a {
     text-decoration: none;
     color: black;
 }
+
+
+/*=====================
+    HOME PAGE STYLES
+=====================*/
+
 
 
 /*------------------------
@@ -587,7 +593,7 @@ header {
  ------------------------------*/
 
 footer {
-    background-color: rgb(27, 25, 48);
+    background-color: var(--color-secondary);
     display: flex;
     flex-direction: column;
     color: white;
@@ -833,4 +839,97 @@ footer {
     .slider-prev:hover {
         opacity: 1;
     }
+}
+
+/*=====================
+    STORE PAGE STYLES
+=====================*/
+
+main {
+    min-height: 100vh;
+}
+
+#store-header {
+    display: flex;
+    width: 100%;
+    padding: 1em;
+    gap: 1em;
+    flex-direction: column;
+}
+
+#search-bar {
+    flex: 1;
+    padding: 1em 2.2em;
+    border-radius: 15px;
+    border: none;
+    background-color: #F3F3F3;
+    position: relative;
+}
+
+.search-filter {
+    display: flex;
+    gap: 1em;
+    padding: 0 em;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    z-index: 5;
+    left: 0.5em;
+    opacity: 0.5;
+}
+
+#filter-products {
+    font-size: 12px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color: #F3F3F3;
+    text-align: center;
+    width: 50%;
+}
+
+#filter-products:focus {
+    outline: 2px solid black;
+}
+
+.types-container {
+    width: 100%;
+    list-style-type: none;
+    gap: 1em;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(70px, 1fr));
+}
+
+.type-btn {
+    transition: all 0.3s;
+}
+
+.type-btn {
+    border: 1px solid white;
+    color: black;
+    text-decoration: none;
+    border-radius: 7px;
+    text-align: center;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.active-type {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+    color: white !important;
+    cursor: default;
+}
+
+.type-btn:hover {
+    border: 1px solid var(--color-secondary);
 }

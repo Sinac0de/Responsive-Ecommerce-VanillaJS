@@ -1,15 +1,20 @@
+/*==============
+ Sidebar Scripts
+===============*/
 const sidebar = document.querySelector(".nav-items");
 const sidebarOpener = document.querySelector(".sidebar-opener");
 const sidebarCloser = document.querySelector(".sidebar-closer");
 const sidebarBackdrop = document.querySelector(".sidebar-backdrop");
 const body = document.body;
 
+/** EVENT LISTENERS **/
 sidebarOpener.addEventListener("click", openSidebar);
 
 [sidebarCloser, sidebarBackdrop].forEach(element => {
     element.addEventListener("click", closeSidebar);
 });
 
+/** Functions **/
 //show sidebar
 function openSidebar() {
     sidebarBackdrop.style.display = "block";
@@ -25,14 +30,13 @@ function closeSidebar() {
 }
 
 
-/*--------------
+/*=============
  SLIDER SCRIPTS
---------------*/
+==============*/
 
 var swiper = new Swiper(".slider-container", {
     slidesPerView: 3,
     spaceBetween: 25,
-    // slidesPerGroup: 3,
     centerSlide: true,
     fade: true,
     loop: true,
@@ -58,3 +62,19 @@ var swiper = new Swiper(".slider-container", {
         }
     }
 });
+
+/*=====================
+ Search-Filter Scripts
+======================*/
+const typeButtons = document.querySelectorAll(".type-btn");
+const activeType = document.querySelector(".active-type");
+
+/** EVENT LISTENERS **/
+typeButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+        console.log("helo");
+        const activetype = document.querySelector(".active-type");
+        activetype.classList.remove("active-type");
+        e.target.classList.add("active-type");
+    });
+})
