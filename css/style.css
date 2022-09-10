@@ -33,6 +33,10 @@ body {
     font-size: var(--font-p-small);
 }
 
+button {
+    cursor: pointer;
+}
+
 /*------------------------
  Header and navbar Styles 
  -----------------------*/
@@ -1071,4 +1075,83 @@ footer {
 
 .shopify {
     color: red;
+}
+
+/*=================
+  Contact Us page
+================*/
+
+#contact-us {
+    min-height: fit-content;
+}
+
+#contact-header {
+    position: relative;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-header img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#contact-header h1 {
+    z-index: 5;
+    position: relative;
+    color: white;
+
+}
+
+#contact-body {
+    padding: 1em;
+}
+
+#send-message {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    gap: 1em;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+#send-message input,
+#send-message textarea {
+    padding: 1em;
+    border-radius: 15px;
+    border: 1px solid #F3F3F3;
+    outline: none;
+    background-color: #F3F3F3;
+    resize: vertical;
+}
+
+#send-message input:focus,
+#send-message textarea:focus {
+    border: 1px solid black;
+}
+
+#send-message label span {
+    color: red;
+}
+
+#send-message button {
+    padding: 1em;
+    border-radius: 15px;
+    border: none;
+    background-color: #F3F3F3;
+    border: 1px solid gray;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+#send-message button:hover {
+    background-color: var(--color-secondary);
+    color: white;
 }
