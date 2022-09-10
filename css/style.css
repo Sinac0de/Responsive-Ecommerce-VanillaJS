@@ -723,164 +723,6 @@ footer {
     margin: 1em 0;
 }
 
-
-
-@media only screen and (min-width:768px) {
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1em 6em;
-        border-bottom: var(--border-seprator);
-        position: sticky;
-        top: 0;
-        right: 0;
-        left: 0;
-    }
-
-    .nav-items {
-        display: flex;
-        list-style-type: none;
-        gap: 1.5em;
-        font-size: 1.3rem;
-    }
-
-    .nav-logo {
-        font-family: var(--font-secondary);
-        font-size: 2.5rem;
-    }
-
-    .nav-item {
-        position: relative;
-        font-size: 1.3rem;
-    }
-
-    .nav-item::before {
-        content: '';
-        width: 0%;
-        bottom: -2px;
-        border-radius: 999px;
-        height: 2px;
-        background-color: var(--color-nav-underline);
-        position: absolute;
-        transition: all 0.3s;
-    }
-
-    .nav-item:hover::before {
-        content: '';
-        width: 60%;
-        bottom: -2px;
-        height: 2px;
-        background-color: var(--color-nav-underline);
-        position: absolute;
-    }
-
-    .active-nav-item::before {
-        content: '';
-        width: 60%;
-        height: 2px;
-        background-color: var(--color-nav-underline);
-        position: absolute;
-    }
-
-    .hero {
-        display: flex;
-        height: 89vh;
-        overflow: hidden;
-    }
-
-    .hero h4 {
-        color: gray;
-        font-size: 1.2rem;
-        font-family: var(--font-secondary);
-        margin: .5em 0;
-        font-weight: 300;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-        font-family: var(--font-primary);
-    }
-
-    .hero p {
-        font-family: var(--font-primary);
-        color: gray;
-        margin: 1em 0;
-    }
-
-    .hero-img-container {
-        order: 2;
-        position: relative;
-        margin-top: 2em;
-        width: 50%;
-        height: 85%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-    }
-
-    .hero-img-back {
-        width: 60%;
-        height: 85%;
-        background-color: black;
-        position: absolute;
-        z-index: -1;
-        border-radius: 500px 500px 0 0;
-        top: 100px;
-    }
-
-    .btn {
-        border: none;
-        outline: none;
-        background-color: transparent;
-        padding: 1em 4em;
-        border-radius: 0.5em;
-        font-family: var(--font-primary);
-        cursor: pointer;
-    }
-
-    .hero-info button {
-        background-color: black;
-        color: white;
-        font-weight: bold;
-        margin-top: 1em;
-    }
-
-    #multiple-banners {
-        display: grid;
-        grid-template-areas: "one one one two two two"
-            "one one one two two two"
-            "three four four four four five"
-            "three four four four four five"
-        ;
-        gap: 1em;
-        padding: 0 3em;
-        width: 100%;
-        margin: 1em;
-    }
-
-    /*------------
-    slider styles
-    ------------- */
-
-    .slider-next,
-    .slider-prev {
-        color: black;
-        opacity: 0.5;
-        transition: all 0.3s;
-    }
-
-    .slider-next:hover,
-    .slider-prev:hover {
-        opacity: 1;
-    }
-}
-
 /*=====================
     STORE PAGE STYLES
 =====================*/
@@ -1154,4 +996,164 @@ footer {
 #send-message button:hover {
     background-color: var(--color-secondary);
     color: white;
+}
+
+/*================
+   MEDIA QUERIES
+================*/
+
+@media only screen and (min-width:768px) {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 6em;
+        border-bottom: var(--border-seprator);
+        position: sticky;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .nav-items {
+        display: flex;
+        list-style-type: none;
+        gap: 1.5em;
+        font-size: 1.3rem;
+    }
+
+    .nav-logo {
+        font-family: var(--font-secondary);
+        font-size: 2.5rem;
+    }
+
+    .nav-item {
+        position: relative;
+        font-size: 1.3rem;
+    }
+
+    .nav-item::before {
+        content: '';
+        width: 0%;
+        bottom: -2px;
+        border-radius: 999px;
+        height: 2px;
+        background-color: var(--color-nav-underline);
+        position: absolute;
+        transition: all 0.3s;
+    }
+
+    .nav-item:hover::before {
+        content: '';
+        width: 60%;
+        bottom: -2px;
+        height: 2px;
+        background-color: var(--color-nav-underline);
+        position: absolute;
+    }
+
+    .active-nav-item::before {
+        content: '';
+        width: 60%;
+        height: 2px;
+        background-color: var(--color-nav-underline);
+        position: absolute;
+    }
+
+    .hero {
+        display: flex;
+        height: 89vh;
+        overflow: hidden;
+    }
+
+    .hero h4 {
+        color: gray;
+        font-size: 1.2rem;
+        font-family: var(--font-secondary);
+        margin: .5em 0;
+        font-weight: 300;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        font-family: var(--font-primary);
+    }
+
+    .hero p {
+        font-family: var(--font-primary);
+        color: gray;
+        margin: 1em 0;
+    }
+
+    .hero-img-container {
+        order: 2;
+        position: relative;
+        margin-top: 2em;
+        width: 50%;
+        height: 85%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-img-back {
+        width: 60%;
+        height: 85%;
+        background-color: black;
+        position: absolute;
+        z-index: -1;
+        border-radius: 500px 500px 0 0;
+        top: 100px;
+    }
+
+    .btn {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        padding: 1em 4em;
+        border-radius: 0.5em;
+        font-family: var(--font-primary);
+        cursor: pointer;
+    }
+
+    .hero-info button {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        margin-top: 1em;
+    }
+
+    #multiple-banners {
+        display: grid;
+        grid-template-areas: "one one one two two two"
+            "one one one two two two"
+            "three four four four four five"
+            "three four four four four five"
+        ;
+        gap: 1em;
+        padding: 0 3em;
+        width: 100%;
+        margin: 1em;
+    }
+
+    /*------------
+    slider styles
+    ------------- */
+
+    .slider-next,
+    .slider-prev {
+        color: black;
+        opacity: 0.5;
+        transition: all 0.3s;
+    }
+
+    .slider-next:hover,
+    .slider-prev:hover {
+        opacity: 1;
+    }
 }
