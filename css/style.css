@@ -347,7 +347,7 @@ header {
     opacity: 1;
 }
 
-.slider-product {
+.product {
     width: 300px;
     height: 400px;
     padding: 1em;
@@ -361,7 +361,7 @@ header {
     cursor: pointer;
 }
 
-.slider-product:hover {
+.product:hover {
     box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.4);
 }
 
@@ -642,8 +642,7 @@ footer {
 .footer-socials {
     display: flex;
     justify-content: center;
-    font-size: 2rem;
-    /* gap: 0.5em; */
+    font-size: var(--font-h-small);
 }
 
 .footer-socials a,
@@ -867,6 +866,10 @@ footer {
     STORE PAGE STYLES
 =====================*/
 
+/*------------------------
+ store search & filter
+ -----------------------*/
+
 main {
     min-height: 100vh;
 }
@@ -952,4 +955,73 @@ main {
 
 .type-btn:hover {
     border: 1px solid var(--color-secondary);
+}
+
+
+/*------------------------
+    store products
+ -----------------------*/
+
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 1em;
+    gap: 1.3em;
+    grid-auto-columns: 500px;
+    justify-items: center;
+}
+
+#products-container .product {
+    width: unset;
+}
+
+/*------------------------
+    store pagination
+ -----------------------*/
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 2em;
+}
+
+#pagination a {
+    background-color: gray;
+    color: black;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#pagination a:hover {
+    opacity: 1;
+    color: white;
+}
+
+#pagination .active-pag {
+    background-color: var(--color-secondary);
+    color: white;
+    opacity: 1;
+    cursor: unset;
 }
