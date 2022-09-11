@@ -285,7 +285,52 @@ footer {
     color: white;
 }
 
+/*------------------------
+  Skeleton loading styles
+ -----------------------*/
+.skeleton {
+    animation: skeleton-loading 1s infinite alternate;
+}
 
+.skeleton-brand,
+.skeleton-title,
+.skeleton-brand,
+.skeleton-rating,
+.skeleton-price {
+    border-radius: 0.3rem;
+    margin: 0.25em;
+    height: 15px;
+}
+
+.skeleton-brand {
+    width: 30%;
+}
+
+.skeleton-title {
+    width: 95%;
+}
+
+.product-description div:nth-child(3) {
+    width: 80%;
+}
+
+.skeleton-rating {
+    width: 35%;
+}
+
+.skeleton-price {
+    width: 20%;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: rgba(128, 128, 128, 0.4);
+    }
+
+    100% {
+        background-color: rgba(128, 128, 128, 0.7);
+    }
+}
 
 
 /*=====================
@@ -485,9 +530,10 @@ footer {
 }
 
 .product-img {
+    /* background-image: url('/images/banners/1.jpg'); */
     width: 100%;
     height: 65%;
-    object-fit: cover;
+    background-size: cover;
     border-radius: 10px;
     border: none;
     background-color: gray;
@@ -832,6 +878,7 @@ footer {
     width: unset;
 }
 
+
 /*------------------------
     store pagination
  -----------------------*/
@@ -996,6 +1043,67 @@ footer {
 #send-message button:hover {
     background-color: var(--color-secondary);
     color: white;
+}
+
+/*=================
+    FAQs page
+================*/
+
+#Faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: fit-content;
+    gap: 1em;
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2em;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 0.5em
+}
+
+.accordion {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    padding-right: 3em;
+    font-size: var(--font-size-regular);
+    text-align: left;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid gray;
+}
+
+.accordion::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
+    position: absolute;
+    font-weight: 900;
+    right: 1em;
+}
+
+.accordion-content {
+    padding: 1em 3em;
+    background-color: #F3F3F3;
+    display: none;
+}
+
+.accordion-content li {
+    padding-left: 1em;
+    list-style-position: inside;
 }
 
 /*================
