@@ -10,6 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
     <title>WearMe | Your dream clothes</title>
 </head>
 
@@ -19,11 +20,13 @@
         <h1 class="nav-logo"><a href="#">WearMe</a></h1>
         <ul class="nav-items">
             <button class="sidebar-closer">&times;</button>
-            <li class="nav-item active-nav-item"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
-            <li class="nav-item"><a href="FAQ.html" class="nav-link">FAQ</a></li>
+            <div id="nav-links">
+                <li class="nav-item active-nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="FAQ.html" class="nav-link">FAQ</a></li>
+            </div>
             <div class="sidebar-btns">
                 <a class="nav-btn" href="cart.html">My Cart <i class="fa-solid fa-bag-shopping"></i></a>
                 <a class="nav-btn" href="sign-in.html">My Account <i class="fa-solid fa-user"></i></a>
@@ -39,6 +42,7 @@
                 <img src="images/hero/hero-image.png" draggable="false" class="hero-img">
                 <div class="hero-img-back"></div>
             </div>
+
             <div class="hero-info">
                 <h4>Absolutely hot collections🔥</h4>
                 <h1>The Best Place To Find And Buy Amazing <span class="gradient-bg">Products</span></h1>
@@ -118,19 +122,13 @@
 
                 <div class="slider-products swiper-wrapper">
                     <div class="product swiper-slide">
-                        <img src="/images/banners/1.jpg" class=" product-img" loading="lazy">
+                        <div class="product-img skeleton" loading="lazy"></div>
                         <div class="product-description">
-                            <span class="product-brand">adidas</span>
-                            <h3 class="product-title">cartonish rainbow shirt that has beautiful things to say</h3>
-                            <div class="product-stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <h5 class="product-price gradient-bg">45$</h5>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
+                            <div class="skeleton skeleton-brand"></div>
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton skeleton-rating"></div>
+                            <h5 class="skeleton skeleton-price"></h5>
                         </div>
                     </div>
                 </div>
@@ -156,7 +154,8 @@
 
                 <div class="slider-products swiper-wrapper">
                     <div class="product swiper-slide">
-                        <img src="/images/banners/1.jpg" class=" product-img" loading="lazy">
+                        <!-- <img src="/images/banners/1.jpg" class=" product-img" loading="lazy"> -->
+                        <div class="product-img skeleton" loading="lazy"></div>
                         <div class="product-description">
                             <span class="product-brand">adidas</span>
                             <h3 class="product-title">cartonish rainbow shirt that has beautiful things to say</h3>
