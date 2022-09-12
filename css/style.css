@@ -21,6 +21,8 @@
     --font-p-small: 0.8rem;
     --font-h-small: 1.2rem;
     --font-size-regular: 1rem;
+    --font-p-tablet: 1rem;
+    --font-h-tablet: 1.5rem;
 }
 
 /*===========================
@@ -97,13 +99,19 @@ header {
     top: 0;
     bottom: 0;
     list-style-type: none;
-    padding: 6em 1.5em;
+    padding: 4.5em 1.5em;
     background-color: #F3F3F3;
     width: 60%;
     transform: translateX(100%);
     transition: all 0.5s;
     z-index: 999;
     font-size: 1.3rem;
+}
+
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
 }
 
 .nav-logo {
@@ -116,7 +124,6 @@ header {
     position: relative;
     font-size: var(--font-h-small);
     width: 100%;
-    margin: 0.8em 0.5em;
 }
 
 .nav-link {
@@ -365,14 +372,13 @@ footer {
 #hero p {
     color: gray;
     font-size: 0.8rem;
-    margin: 1em 0;
+    margin: 0.5em;
 }
 
 .hero-img-container {
     position: relative;
-    width: 80%;
+    width: 100%;
     height: 100%;
-    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -382,13 +388,16 @@ footer {
 }
 
 .hero-img-back {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 85%;
     background-color: black;
     position: absolute;
     z-index: -1;
     border-radius: 500px 500px 0 0;
-    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .btn {
@@ -1336,158 +1345,70 @@ footer {
    MEDIA QUERIES
 ================*/
 
-@media only screen and (min-width:768px) {
-    a {
-        text-decoration: none;
-        color: black;
+/* Tablet */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+
+    /*===========================
+    SAME FOR ALL PAGES
+=============================*/
+
+    body {
+        font-family: var(--font-primary);
+        overflow-x: hidden;
+        font-size: var(--font-p-tablet);
     }
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1em 6em;
-        border-bottom: var(--border-seprator);
-        position: sticky;
-        top: 0;
-        right: 0;
-        left: 0;
+    button {
+        cursor: pointer;
     }
 
-    .nav-items {
-        display: flex;
-        list-style-type: none;
-        gap: 1.5em;
-        font-size: 1.3rem;
+    /*------------------------
+ Header and navbar Styles 
+ -----------------------*/
+
+    header {
+        padding: 0.8em;
+    }
+
+    .sidebar-opener {
+        font-size: 1.5rem;
+    }
+
+    .sidebar-closer {
+        font-size: 2.5rem;
     }
 
     .nav-logo {
-        font-family: var(--font-secondary);
         font-size: 2.5rem;
     }
 
     .nav-item {
-        position: relative;
-        font-size: 1.3rem;
+        font-size: var(--font-h-tablet);
+        margin: 0.5em 0;
     }
 
-    .nav-item::before {
-        content: '';
-        width: 0%;
-        bottom: -2px;
-        border-radius: 999px;
-        height: 2px;
-        background-color: var(--color-nav-underline);
-        position: absolute;
-        transition: all 0.3s;
+    .nav-btn {
+        font-size: var(--font-h-tablet);
     }
 
-    .nav-item:hover::before {
-        content: '';
-        width: 60%;
-        bottom: -2px;
-        height: 2px;
-        background-color: var(--color-nav-underline);
-        position: absolute;
+    /*------------------
+    Footer styles
+ -----------------*/
+
+
+    .footer-logo {
+        font-size: 2rem;
     }
 
-    .active-nav-item::before {
-        content: '';
-        width: 60%;
-        height: 2px;
-        background-color: var(--color-nav-underline);
-        position: absolute;
+    #install-app .btn {
+        display: inline-block;
+        width: 40%;
     }
 
-    .hero {
-        display: flex;
-        height: 89vh;
-        overflow: hidden;
+    .credit {
+        font-size: var(--font-p-tablet);
     }
 
-    .hero h4 {
-        color: gray;
-        font-size: 1.2rem;
-        font-family: var(--font-secondary);
-        margin: .5em 0;
-        font-weight: 300;
-    }
 
-    .hero h1 {
-        font-size: 3rem;
-        font-family: var(--font-primary);
-    }
 
-    .hero p {
-        font-family: var(--font-primary);
-        color: gray;
-        margin: 1em 0;
-    }
-
-    .hero-img-container {
-        order: 2;
-        position: relative;
-        margin-top: 2em;
-        width: 50%;
-        height: 85%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-    }
-
-    .hero-img-back {
-        width: 60%;
-        height: 85%;
-        background-color: black;
-        position: absolute;
-        z-index: -1;
-        border-radius: 500px 500px 0 0;
-        top: 100px;
-    }
-
-    .btn {
-        border: none;
-        outline: none;
-        background-color: transparent;
-        padding: 1em 4em;
-        border-radius: 0.5em;
-        font-family: var(--font-primary);
-        cursor: pointer;
-    }
-
-    .hero-info button {
-        background-color: black;
-        color: white;
-        font-weight: bold;
-        margin-top: 1em;
-    }
-
-    #multiple-banners {
-        display: grid;
-        grid-template-areas: "one one one two two two"
-            "one one one two two two"
-            "three four four four four five"
-            "three four four four four five"
-        ;
-        gap: 1em;
-        padding: 0 3em;
-        width: 100%;
-        margin: 1em;
-    }
-
-    /*------------
-    slider styles
-    ------------- */
-
-    .slider-next,
-    .slider-prev {
-        color: black;
-        opacity: 0.5;
-        transition: all 0.3s;
-    }
-
-    .slider-next:hover,
-    .slider-prev:hover {
-        opacity: 1;
-    }
 }
