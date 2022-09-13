@@ -170,7 +170,7 @@ header {
 
 .nav-item:hover::before {
     content: '';
-    width: 13%;
+    width: 20px;
     bottom: -2px;
     height: 2px;
     background-color: var(--color-nav-underline);
@@ -179,7 +179,7 @@ header {
 
 .active-nav-item::before {
     content: '';
-    width: 13%;
+    width: 20px;
     height: 2px;
     background-color: var(--color-nav-underline);
     position: absolute;
@@ -379,6 +379,8 @@ footer {
     position: relative;
     width: 100%;
     height: 100%;
+    max-width: 400px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -418,6 +420,20 @@ footer {
     margin-top: 1em;
     width: fit-content;
     font-size: var(--font-p-small);
+    position: relative;
+}
+
+.hero-info .btn::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border: 5px solid transparent;
+    border-top: 5px solid black;
+    bottom: -1em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
 .hero-statics {
@@ -491,7 +507,7 @@ footer {
 
 .slider-container {
     height: 450px;
-    width: 90%;
+    width: 95%;
     display: flex;
     gap: 1.5em;
     margin: 0 auto;
@@ -598,7 +614,7 @@ footer {
 #banner {
     margin: 1em 0;
     height: 40vh;
-    background-image: url('/images/banners/bannerOne.jpg');
+    background-image: url('/images/banners/1.jpg');
     background-position: center;
     background-size: cover;
     padding: 2em;
@@ -1350,25 +1366,12 @@ footer {
 
     /*===========================
     SAME FOR ALL PAGES
-=============================*/
-
-    body {
-        font-family: var(--font-primary);
-        overflow-x: hidden;
-        font-size: var(--font-p-tablet);
-    }
-
-    button {
-        cursor: pointer;
-    }
+=================================*/
 
     /*------------------------
  Header and navbar Styles 
  -----------------------*/
 
-    header {
-        padding: 0.8em;
-    }
 
     .sidebar-opener {
         font-size: 1.5rem;
@@ -1383,12 +1386,15 @@ footer {
     }
 
     .nav-item {
-        font-size: var(--font-h-tablet);
-        margin: 0.5em 0;
+        margin: 0.4em 0;
     }
 
-    .nav-btn {
-        font-size: var(--font-h-tablet);
+    .nav-item:hover::before {
+        width: 25px;
+    }
+
+    .active-nav-item::before {
+        width: 25px;
     }
 
     /*------------------
@@ -1409,6 +1415,110 @@ footer {
         font-size: var(--font-p-tablet);
     }
 
+    /*=====================
+    HOME PAGE STYLES
+=====================*/
 
+    /*----------------
+ Home Hero Styles 
+ -----------------*/
+
+    #hero {
+        flex-direction: row;
+        max-height: 500px;
+    }
+
+    .hero-img-container {
+        width: fit-content;
+        height: 100%;
+        margin: unset;
+        left: 1em;
+    }
+
+    .hero-img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-img-back {
+        width: 60%;
+        left: 0;
+        right: unset;
+    }
+
+    .hero-info {
+        position: absolute;
+        width: 60%;
+        right: 2em;
+        top: 14em;
+        padding: 1em;
+    }
+
+
+    /*-----------------------------
+ Home featured products Styles 
+ ------------------------------*/
+
+    #featured-products {
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+        margin: 1em 0;
+    }
+
+    #featured-products h2,
+    #new-arrival h2 {
+        font-size: var(--font-h-tablet);
+    }
+
+    #featured-products p {
+        font-size: var(--font-p-tablet);
+    }
+
+    /*-----------------------------
+    Slider Products styles
+ ------------------------------*/
+
+    .slider-next,
+    .slider-prev {
+        display: block;
+        color: black;
+        opacity: 0.6;
+        transition: all 0.3s;
+    }
+
+    .slider-next:hover,
+    .slider-prev:hover {
+        opacity: 1;
+    }
+
+    /*-----------------------------
+    Home banners styles
+ ------------------------------*/
+
+    /* multiple banners */
+
+    .sm-banner-info h4,
+    .sm-banner-info h2 {
+        font-size: 1.5rem;
+    }
+
+    /*----------------
+ Home features Styles 
+ -----------------*/
+
+    #features {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-auto-rows: 150px;
+        justify-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+
+    .feature-header {
+        margin-bottom: 0.5em;
+        font-size: var(--font-size-regular);
+    }
 
 }
