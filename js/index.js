@@ -41,6 +41,10 @@ var swiper = new Swiper(".slider-container", {
     fade: true,
     loop: true,
     loopFillGroupWithBlank: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
