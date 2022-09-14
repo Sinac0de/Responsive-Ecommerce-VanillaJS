@@ -29,10 +29,19 @@
     SAME FOR ALL PAGES
 =============================*/
 
+
 body {
     font-family: var(--font-primary);
     overflow-x: hidden;
     font-size: var(--font-p-small);
+}
+
+body::-webkit-scrollbar {
+    background-color: #F3F3F3;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: black;
 }
 
 button {
@@ -156,6 +165,7 @@ header {
     background-color: black;
     color: white;
 }
+
 
 .nav-item::before {
     content: '';
@@ -297,6 +307,15 @@ footer {
  -----------------------*/
 .skeleton {
     animation: skeleton-loading 1s infinite alternate;
+}
+
+.product.product-skeleton {
+    cursor: default;
+}
+
+.product.product-skeleton:hover {
+    box-shadow: unset;
+    box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
 .skeleton-brand,
@@ -493,7 +512,7 @@ footer {
  Home featured products Styles 
  ------------------------------*/
 
-#featured-products {
+.featured-products {
     width: 100%;
     text-align: center;
     padding: 1em;
@@ -610,7 +629,7 @@ footer {
     Home banners styles
  ------------------------------*/
 
-#banner {
+.banner {
     margin: 1em 0;
     height: 40vh;
     background-image: url('/images/banners/1.jpg');
@@ -621,7 +640,7 @@ footer {
     z-index: 0;
 }
 
-#banner::before {
+.banner::before {
     content: '';
     width: 100%;
     height: 100%;
@@ -678,7 +697,7 @@ footer {
 
 /* multiple banners */
 
-#multiple-banners {
+.multiple-banners {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -786,7 +805,7 @@ footer {
   Home New Arrival styles
  ------------------------------*/
 
-#new-arrival {
+.new-arrival {
     width: 100%;
     text-align: center;
     padding: 1em;
@@ -953,6 +972,79 @@ footer {
     opacity: 1;
     cursor: unset;
 }
+
+
+/*======================
+    Single Product page
+=======================*/
+#s-product {
+    margin: 1em 0;
+    margin-bottom: 2em;
+}
+
+.s-product-img-container {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.s-product-img-big {
+    width: 100%;
+}
+
+.s-product-img-row {
+    display: flex;
+    gap: 1em;
+}
+
+.s-product-img-small {
+    width: 100%;
+}
+
+.s-product-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    gap: 0.2em;
+    text-align: center;
+}
+
+.s-product-add-to-cart {
+    margin: 1em 0;
+}
+
+.s-product-btn {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: all 0.3s;
+    /* display: none; */
+}
+
+.s-product-quantity.quantity-container {
+    width: 100%;
+    justify-content: center;
+    display: none;
+}
+
+.s-product-quantity.quantity-container button,
+.s-product-quantity.quantity-container span {
+    font-size: 1.5rem;
+}
+
+.s-product-desc {
+    color: gray;
+    padding: 0 1em;
+}
+
 
 /*=================
   About Us page
@@ -1128,7 +1220,7 @@ footer {
 .accordion-content {
     padding: 1em 3em;
     background-color: #F3F3F3;
-    display: none;
+    /* display: none; */
 }
 
 .accordion-content li {
@@ -1465,19 +1557,411 @@ footer {
  Home featured products Styles 
  ------------------------------*/
 
-    #featured-products {
+    .featured-products {
         width: 100%;
         text-align: center;
         padding: 1em;
         margin: 1em 0;
     }
 
-    #featured-products h2,
-    #new-arrival h2 {
+    .featured-products h2,
+    .new-arrival h2 {
         font-size: var(--font-h-tablet);
     }
 
-    #featured-products p {
+    .featured-products p {
+        font-size: var(--font-p-tablet);
+    }
+
+    /*-----------------------------
+    Slider Products styles
+ ------------------------------*/
+
+    .slider-next,
+    .slider-prev {
+        display: block;
+        color: black;
+        opacity: 0.6;
+        transition: all 0.3s;
+    }
+
+    .slider-next:hover,
+    .slider-prev:hover {
+        opacity: 1;
+    }
+
+    /*-----------------------------
+    Home banners styles
+ ------------------------------*/
+
+    /* multiple banners */
+
+    .sm-banner-info h4,
+    .sm-banner-info h2 {
+        font-size: 1.5rem;
+    }
+
+    /*----------------
+ Home features Styles 
+ -----------------*/
+
+    #features {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-auto-rows: 150px;
+        justify-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+
+    .feature-header {
+        margin-bottom: 0.5em;
+        font-size: var(--font-size-regular);
+    }
+
+
+    /*=================
+  About Us page
+================*/
+
+    #about {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1em;
+        padding: 1em 2em;
+    }
+
+    .about-us {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-text {
+        width: 50%;
+        line-height: 1.5;
+    }
+
+    .about-img {
+        width: 50%;
+    }
+
+    .about-us img {
+        width: 100%;
+    }
+
+    .about-us:nth-child(2) .about-text {
+        order: 2;
+    }
+
+    .shopify {
+        color: red;
+    }
+
+    /*=================
+    Cart page
+================*/
+    #cart {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* cart products */
+    .cart-products {
+        overflow-y: scroll;
+        height: 500px;
+        padding: 1em;
+    }
+
+
+    .cart-product {
+        width: 380px;
+        padding: 1em;
+        position: relative;
+    }
+
+    .cart-delete-product {
+        top: 0.2em;
+        right: 0.3em;
+    }
+
+    /* cart checkout */
+    #cart-checkout {
+        width: 40%;
+        height: 220px;
+        position: sticky;
+        margin-top: 4.3em;
+        top: 10em;
+    }
+
+
+}
+
+/* Desktop */
+@media only screen and (min-width:1024px) {
+
+    /*===========================
+    SAME FOR ALL PAGES
+=================================*/
+
+    /*------------------------
+ Header and navbar Styles 
+ -----------------------*/
+    header {
+        align-items: center;
+        justify-content: unset;
+    }
+
+    .sidebar-opener,
+    .sidebar-closer {
+        display: none;
+    }
+
+
+    .nav-items {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: unset;
+        right: unset;
+        top: unset;
+        bottom: unset;
+        padding: unset;
+        background-color: unset;
+        width: 100%;
+        padding: 0 1em;
+        transition: unset;
+        padding-left: 2em;
+        margin: 0 auto;
+        transform: unset;
+    }
+
+    #nav-links {
+        flex-direction: row;
+    }
+
+    .nav-logo {
+        font-size: 2.5rem;
+    }
+
+    .nav-item {
+        width: unset;
+    }
+
+
+    .sidebar-btns {
+        position: unset;
+        width: unset;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+    .nav-btn {
+        width: unset;
+        border: unset;
+    }
+
+    .active-nav-btn {
+        background-color: black;
+        color: white;
+    }
+
+    .nav-item::before {
+        content: '';
+        width: 0%;
+        bottom: -2px;
+        border-radius: 999px;
+        height: 2px;
+        background-color: var(--color-nav-underline);
+        position: absolute;
+        transition: all 0.3s;
+    }
+
+    .nav-item:hover::before {
+        content: '';
+        width: 20px;
+        bottom: -2px;
+        height: 2px;
+        background-color: var(--color-nav-underline);
+        position: absolute;
+    }
+
+    .active-nav-item::before {
+        content: '';
+        width: 20px;
+        height: 2px;
+        background-color: var(--color-nav-underline);
+        position: absolute;
+    }
+
+    /*-------------------*/
+
+    main {
+        min-height: 100vh;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /*------------------
+    Footer styles
+ -----------------*/
+
+    footer {
+        background-color: var(--color-secondary);
+        display: flex;
+        flex-direction: column;
+        color: white;
+        padding: 2em 2em;
+        line-height: 1.5rem;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .footer-logo {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+        color: white;
+        font-family: var(--font-fantasy);
+    }
+
+    .footer-col {
+        margin: 0.5em 0;
+    }
+
+    .footer-col h3 {
+        margin: 1em 0;
+    }
+
+
+    .footer-socials {
+        display: flex;
+        justify-content: center;
+        font-size: var(--font-h-small);
+    }
+
+    .footer-socials a,
+    .footer-col a {
+        color: white;
+    }
+
+    .footer-col a {
+        padding: 0.5em;
+        transition: all 0.3s;
+        opacity: 0.5;
+    }
+
+    .footer-col a:hover {
+        opacity: 1;
+    }
+
+    #facebook:hover {
+        color: #4267B2;
+    }
+
+    #twitter:hover {
+        color: #1DA1F2;
+    }
+
+    #instagram:hover {
+        color: #C13584;
+    }
+
+    #pinterest:hover {
+        color: #E60023;
+    }
+
+    #youtube:hover {
+        color: #FF0000;
+    }
+
+    #install-app .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        padding: 1em;
+        width: 100%;
+        margin: 1em 0;
+        border: 1px solid white;
+    }
+
+    #install-app .btn:hover {
+        background-color: white;
+        color: gray;
+    }
+
+    .credit {
+        line-height: 1.5;
+    }
+
+    .credit a {
+        color: white;
+    }
+
+    /*=====================
+    HOME PAGE STYLES
+=====================*/
+
+    /*----------------
+ Home Hero Styles 
+ -----------------*/
+
+    #hero {
+        flex-direction: row;
+        max-height: 500px;
+    }
+
+    .hero-img-container {
+        width: fit-content;
+        height: 100%;
+        margin: unset;
+        left: 1em;
+    }
+
+    .hero-img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-img-back {
+        width: 60%;
+        left: 0;
+        right: unset;
+    }
+
+    .hero-info {
+        position: absolute;
+        width: 60%;
+        right: 2em;
+        top: 14em;
+        padding: 1em;
+    }
+
+
+    /*-----------------------------
+ Home featured products Styles 
+ ------------------------------*/
+
+    .featured-products {
+        width: 100%;
+        text-align: center;
+        padding: 1em;
+        margin: 1em 0;
+    }
+
+    .featured-products h2,
+    .new-arrival h2 {
+        font-size: var(--font-h-tablet);
+    }
+
+    .featured-products p {
         font-size: var(--font-p-tablet);
     }
 
