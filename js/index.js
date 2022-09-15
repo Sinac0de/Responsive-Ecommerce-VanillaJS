@@ -63,6 +63,12 @@ var swiper = new Swiper(".slider-container", {
         },
         950: {
             slidesPerView: 3,
+        },
+        1300: {
+            slidesPerView: 4,
+        },
+        1650: {
+            slidesPerView: 5,
         }
     }
 });
