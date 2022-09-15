@@ -1084,7 +1084,8 @@ footer {
 }
 
 .shopify {
-    color: red;
+    color: gray;
+    margin: 0.5em;
 }
 
 /*=================
