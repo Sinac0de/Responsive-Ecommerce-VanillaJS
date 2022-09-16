@@ -1089,9 +1089,9 @@ footer {
     font-family: var(--font-fantasy);
 }
 
-.about-us h4 {
+.about-us p {
     color: gray;
-    margin-top: 0.5em;
+    padding: 0 0.3em;
 }
 
 .about-us img {
@@ -1673,9 +1673,7 @@ footer {
         order: 2;
     }
 
-    .shopify {
-        color: red;
-    }
+
 
     /*=================
     Cart page
@@ -2260,12 +2258,10 @@ footer {
     #store-header {
         display: flex;
         justify-content: flex-end;
+        padding: 1.5em;
     }
 
     #search-bar {
-        flex: 1;
-        padding: 1em 2.2em;
-        border-radius: 15px;
         background-color: #F3F3F3;
         position: relative;
     }
@@ -2281,19 +2277,7 @@ footer {
         width: 85%;
     }
 
-    .search-icon {
-        position: absolute;
-        z-index: 5;
-        left: 0.5em;
-        opacity: 0.5;
-    }
-
     #filter-products {
-        font-size: 12px;
-        outline: none;
-        border-radius: 15px;
-        background-color: #F3F3F3;
-        text-align: center;
         width: 10%;
     }
 
@@ -2322,29 +2306,8 @@ footer {
     }
 
     .type-btn {
-        border: 1px solid white;
-        color: black;
-        text-decoration: none;
-        border-radius: 7px;
-        text-align: center;
-        padding: 0.5em;
-        cursor: pointer;
-        transition: all 0.3s;
-        font-size: var(--font-p-small);
         width: 80px;
     }
-
-    .active-type {
-        background-color: var(--color-secondary);
-        border: 1px solid var(--color-secondary);
-        color: white !important;
-        cursor: default;
-    }
-
-    .type-btn:hover {
-        border: 1px solid var(--color-secondary);
-    }
-
 
     /*------------------------
     store products
@@ -2372,6 +2335,44 @@ footer {
         align-items: center;
         gap: 1em;
         width: 100%;
+    }
+
+    /*=================
+  About Us page
+================*/
+
+    #about {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1em;
+        padding: 1em 2em;
+    }
+
+    .about-us {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-text {
+        width: 50%;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .about-img {
+        width: 40%;
+    }
+
+    .about-us img {
+        width: 100%;
+    }
+
+    .about-us:nth-child(2) .about-text {
+        order: 2;
     }
 
 }
