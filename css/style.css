@@ -593,7 +593,6 @@ footer {
     object-fit: contain;
     border-radius: 10px;
     border: none;
-    background-color: gray;
 }
 
 .product-title {
@@ -857,10 +856,15 @@ footer {
     flex: 1;
     padding: 1em 2.2em;
     border-radius: 15px;
-    background-color: #F3F3F3;
+    background-color: white;
     border: 1px solid gray;
     position: relative;
 }
+
+#search-bar:focus {
+    outline: 2px solid black;
+}
+
 
 .search-filter {
     display: flex;
@@ -885,7 +889,6 @@ footer {
     font-size: 12px;
     outline: none;
     border-radius: 15px;
-    background-color: #F3F3F3;
     border: 1px solid gray;
     color: gray;
     text-align: center;
@@ -2359,7 +2362,6 @@ footer {
     }
 
     #search-bar {
-        background-color: #F3F3F3;
         position: relative;
     }
 
