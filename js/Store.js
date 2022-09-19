@@ -1,4 +1,3 @@
-
 /*=====================
  Search-Filter Scripts
 ======================*/
@@ -28,7 +27,9 @@ for (let i = 0; i < 10; i++) {
 /*--Get products and replace them with templates--*/
 axios.get("https://api.npoint.io/1457b931488d039da03f").then(res => {
     const products = res.data.items;//all products
+    //clear slides container
     storeProductsDiv.innerHTML = "";
+    //append slides
     products.forEach(product => {
         const div = document.createElement("div");
         div.classList.add("product");

@@ -5,7 +5,7 @@ accordionBtn.forEach(btn => {
     btn.addEventListener("click", toggleAccordionContent);
 })
 
-/* Functions */
+/* toggle accordion content */
 function toggleAccordionContent(e) {
     e.target.classList.toggle("active-accordion");
     const accordionContent = e.target.nextElementSibling;//get the accordion content next to clicked btn
@@ -15,4 +15,5 @@ function toggleAccordionContent(e) {
         accordionContent.style.maxHeight = accordionContent.scrollHeight + "px"; //Add content height including border and padding to the max-height
     }
 }
+
 

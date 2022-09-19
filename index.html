@@ -70,36 +70,23 @@
             <h2>Featured Products</h2>
             <p>Level up your style with our products</p>
             <div class="slider-container swiper mySwiper">
-
                 <div class="slider-products swiper-wrapper">
-                    <div class="product swiper-slide product-skeleton">
-                        <div class="product-img skeleton" loading="lazy"></div>
-                        <div class="product-description">
-                            <div class="product-brand-stars">
-                                <div class="skeleton skeleton-brand"></div>
-                                <div class="skeleton skeleton-rating"></div>
-                            </div>
 
-                            <div class="skeleton skeleton-title"></div>
-                            <div class="skeleton skeleton-title"></div>
-                            <h5 class="skeleton skeleton-price"></h5>
-                        </div>
-                    </div>
-                    <div class="product swiper-slide product-skeleton">
-                        <div class="product-img skeleton" loading="lazy"></div>
-                        <div class="product-description">
-                            <div class="product-brand-stars">
-                                <div class="skeleton skeleton-brand"></div>
-                                <div class="skeleton skeleton-rating"></div>
+                    <template class="template-product">
+                        <div class="product swiper-slide product-skeleton">
+                            <div class="product-img skeleton" loading="lazy"></div>
+                            <div class="product-description">
+                                <div class="product-brand-stars">
+                                    <div class="skeleton skeleton-brand"></div>
+                                    <div class="skeleton skeleton-rating"></div>
+                                </div>
+                                <div class="skeleton skeleton-title"></div>
+                                <div class="skeleton skeleton-title"></div>
+                                <h5 class="skeleton skeleton-price"></h5>
                             </div>
-
-                            <div class="skeleton skeleton-title"></div>
-                            <div class="skeleton skeleton-title"></div>
-                            <h5 class="skeleton skeleton-price"></h5>
                         </div>
-                    </div>
+                    </template>
                 </div>
-
 
                 <div class="swiper-button-next slider-next"></div>
                 <div class="swiper-button-prev slider-prev"></div>
@@ -120,41 +107,7 @@
             <p>Lorem ipsum dolor sit amet consectetur.</p>
             <div class="slider-container swiper mySwiper">
 
-                <div class="slider-products swiper-wrapper">
-
-                    <div class="product swiper-slide">
-                        <img src="/images/products/black-watch.jpg" class=" product-img" loading="lazy">
-                        <div class="product-description">
-                            <div class="product-brand-stars">
-                                <span class="product-brand">adidas</span>
-                                <div class="product-stars">
-                                    4.5<i class="fa-solid fa-star"></i>
-                                </div>
-                            </div>
-                            <h3 class="product-title">cartonish rainbow shirt that has beautiful things to say</h3>
-                            <div class="product-price-cart">
-                                <h5 class="product-price gradient-bg">45$</h5>
-                                <button class="add-to-cart-btn"><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="product swiper-slide product-skeleton">
-                        <div class="product-img skeleton" loading="lazy"></div>
-                        <div class="product-description">
-                            <div class="product-brand-stars">
-                                <div class="skeleton skeleton-brand"></div>
-                                <div class="skeleton skeleton-rating"></div>
-                            </div>
-
-                            <div class="skeleton skeleton-title"></div>
-                            <div class="skeleton skeleton-title"></div>
-                            <h5 class="skeleton skeleton-price"></h5>
-                        </div>
-                    </div>
-                </div>
-
+                <div class="slider-products swiper-wrapper"></div>
 
                 <div class="swiper-button-next slider-next"></div>
                 <div class="swiper-button-prev slider-prev"></div>
@@ -312,9 +265,10 @@
 
     </footer>
 
-    <script src="js/Essentials.js"></script>
+    <script src="js/essentials.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/Sliders.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
