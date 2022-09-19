@@ -2,7 +2,6 @@
  Search-Filter Scripts
 ======================*/
 const typeButtons = document.querySelectorAll(".type-btn");
-const activeType = document.querySelector(".active-type");
 
 /** EVENT LISTENERS **/
 typeButtons.forEach(btn => {
@@ -16,6 +15,8 @@ typeButtons.forEach(btn => {
 /*======================
  loading products Scripts
 ========================*/
+import Product from "./Product.js";
+
 const storeProductsDiv = document.getElementById("products-container");
 const templateProduct = document.querySelector(".template-product");
 
@@ -31,25 +32,13 @@ axios.get("https://api.npoint.io/1457b931488d039da03f").then(res => {
     storeProductsDiv.innerHTML = "";
     //append slides
     products.forEach(product => {
-        const div = document.createElement("div");
-        div.classList.add("product");
-        div.innerHTML = `
-        <img src="${product.image}" alt="${product.imageAlt}" class="product-img" loading="lazy">
-        <div class="product-description">
-            <div class="product-brand-stars">
-                <span class="product-brand">${product.brand}</span>
-                <div class="product-stars">
-                    ${product.rate} <i class="fa-solid fa-star"></i>
-                </div>
-            </div>
-            <h3 class="product-title">${product.title}</h3>
-            <div class="product-price-cart">
-                <h5 class="product-price gradient-bg">$${product.price}</h5>
-                <button class="add-to-cart-btn" data-id="${product.id}"><i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-        </div>`;
-        storeProductsDiv.append(div);
+        const productDiv = Product.createProduct(product, false);
+        storeProductsDiv.append(productDiv);
     });
+
+    //add event listener to products card
+    Product.setEventListener();
+
 }).catch(err => console.log(err));
 
 
