@@ -701,8 +701,9 @@ footer {
 .banner {
     margin: 1em 0;
     height: 40vh;
-    background-image: url('/images/banners/1.jpg');
+    background-image: url('/images/banners/6.jpg');
     background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     padding: 2em;
     position: relative;
@@ -717,7 +718,7 @@ footer {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .banner-info {
@@ -2191,7 +2192,8 @@ footer {
     .hero-img-back {
         width: 40%;
         height: 80%;
-        left: 80px;
+        /* left: 80px; */
+        left: 120px;
         right: unset;
         bottom: 0;
         position: absolute;
