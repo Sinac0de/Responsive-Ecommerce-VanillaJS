@@ -701,7 +701,7 @@ footer {
 .banner {
     margin: 1em 0;
     height: 40vh;
-    background-image: url('/images/banners/6.jpg');
+    background-image: url('/images/banners/1.jpg');
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -848,28 +848,7 @@ footer {
     text-transform: uppercase;
 }
 
-.sm-banner:nth-child(1) {
-    grid-area: one;
-}
 
-.sm-banner:nth-child(2) {
-    grid-area: two;
-}
-
-.sm-banner:nth-child(3) {
-    grid-area: three;
-
-}
-
-.sm-banner:nth-child(4) {
-    grid-area: four;
-
-}
-
-.sm-banner:nth-child(5) {
-    grid-area: five;
-
-}
 
 /*-----------------------------
   Home New Arrival styles
