@@ -775,6 +775,24 @@ footer {
     padding: 1em;
 }
 
+.banner-btn {
+    display: flex;
+    width: fit-content;
+    border: 1px solid white;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.3s;
+
+}
+
+
+.banner-btn:hover {
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+}
+
 .sm-banner {
     height: 40vh;
     background-position: center;
@@ -833,22 +851,6 @@ footer {
     margin-top: 1em;
     padding: 1em;
 }
-
-.sm-banner .btn {
-    border: 1px solid white;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    transition: all 0.3s;
-}
-
-.sm-banner .btn:hover {
-    background-color: white;
-    color: black;
-    text-transform: uppercase;
-}
-
-
 
 /*-----------------------------
   Home New Arrival styles
@@ -2664,9 +2666,7 @@ footer {
     }
 
     .cart-img-container img {
-        width: 100%;
-        object-fit: cover;
-        border-radius: 15px;
+        object-fit: contain;
     }
 
     .cart-product-desc {
