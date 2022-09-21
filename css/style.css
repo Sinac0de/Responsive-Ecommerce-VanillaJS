@@ -989,6 +989,19 @@ footer {
     width: 100%;
 }
 
+#products-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+#store-not-found-icon {
+    font-size: 6rem;
+}
+
 
 /*------------------------
     store pagination
