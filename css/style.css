@@ -957,6 +957,7 @@ footer {
 
 .active-type {
     background-color: var(--color-secondary);
+    background-color: black;
     border: 1px solid var(--color-secondary);
     color: white !important;
     cursor: default;
@@ -978,6 +979,7 @@ footer {
     gap: 1.3em;
     grid-auto-columns: 500px;
     justify-items: center;
+    min-height: 50vh;
     margin: 1em;
 }
 
@@ -1351,15 +1353,6 @@ footer {
     font-size: var(--font-h-small);
 }
 
-.cart-product-quantity span {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-secondary);
-    color: white;
-}
 
 .cart-product-header {
     font-size: var(--font-p-small);
@@ -1379,7 +1372,7 @@ footer {
 #quantity {
     border: none;
     outline: none;
-    background-color: var(--color-secondary);
+    background-color: black;
     color: white;
     width: 30px;
     display: flex;
@@ -1387,6 +1380,12 @@ footer {
     align-items: center;
     height: 30px;
     padding: 0.8em;
+}
+
+#quantity {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
 
 #cart-product-minus {
@@ -2395,7 +2394,6 @@ footer {
     /*------------------------
  store search & filter
  -----------------------*/
-
     #store-header {
         display: flex;
         justify-content: flex-end;
@@ -2456,12 +2454,9 @@ footer {
     #products-container {
         border-left: 1px solid #cacaca;
         margin: 0.5em;
+        grid-template-columns: repeat(auto-fit, 270px);
+        justify-content: center;
     }
-
-    #products-container .product {
-        width: 100%;
-    }
-
 
     /*------------------------
     store pagination
