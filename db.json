@@ -7,7 +7,12 @@
             "type": "watch",
             "price": 83.99,
             "image": "/images/products/watch/Seiko SRQ015J1/1.jpg",
-            "smallImages": "['/images/products/watch/Seiko SRQ015J1/1.jpg','/images/products/watch/Seiko SRQ015J1/2.jpg','/images/products/watch/Seiko SRQ015J1/3.jpg','/images/products/watch/Seiko SRQ015J1/4.jpg']",
+            "smallImages": [
+                "/images/products/watch/Seiko SRQ015J1/1.jpg",
+                "/images/products/watch/Seiko SRQ015J1/2.jpg",
+                "/images/products/watch/Seiko SRQ015J1/3.jpg",
+                "/images/products/watch/Seiko SRQ015J1/4.jpg"
+            ],
             "imageAlt": "SEIKO watch with metal band",
             "description": "A great watch for men who love being different. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:31:54.394Z",
@@ -20,7 +25,12 @@
             "type": "shirt",
             "price": 36,
             "image": "/images/products/shirt/Hawaii R.S.K.O MB-01/1.jpg",
-            "smallImages": "['/images/products/shirt/Hawaii R.S.K.O MB-01/1.jpg','/images/products/shirt/Hawaii R.S.K.O MB-01/2.jpg','/images/products/shirt/Hawaii R.S.K.O MB-01/3.jpg','/images/products/shirt/Hawaii R.S.K.O MB-01/4.jpg']",
+            "smallImages": [
+                "/images/products/shirt/Hawaii R.S.K.O MB-01/1.jpg",
+                "/images/products/shirt/Hawaii R.S.K.O MB-01/2.jpg",
+                "/images/products/shirt/Hawaii R.S.K.O MB-01/3.jpg",
+                "/images/products/shirt/Hawaii R.S.K.O MB-01/4.jpg"
+            ],
             "imageAlt": "R.S.K.O HAWAII black tropical shirt",
             "description": "Enjoy your summer vacation with this shirt.It's amazing! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:55.830Z",
@@ -33,7 +43,12 @@
             "type": "shoes",
             "price": 65,
             "image": "/images/products/shoes/All Star High BL/1.jpg",
-            "smallImages": "['/images/products/shoes/All Star High BL/1.jpg','/images/products/shoes/All Star High BL/2.jpg','/images/products/shoes/All Star High BL/3.jpg','/images/products/shoes/All Star High BL/4.jpg']",
+            "smallImages": [
+                "/images/products/shoes/All Star High BL/1.jpg",
+                "/images/products/shoes/All Star High BL/2.jpg",
+                "/images/products/shoes/All Star High BL/3.jpg",
+                "/images/products/shoes/All Star High BL/4.jpg"
+            ],
             "imageAlt": "ALL STAR High BL shoes",
             "description": "Everyone loves these! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:53.702Z",
@@ -46,7 +61,12 @@
             "type": "glasses",
             "price": 66.99,
             "image": "/images/products/glasses/FLIRT FLS283/1.jpg",
-            "smallImages": "['/images/products/glasses/FLIRT FLS283/1.jpg','/images/products/glasses/FLIRT FLS283/1.jpg','/images/products/glasses/FLIRT FLS283/1.jpg','/images/products/glasses/FLIRT FLS283/1.jpg']",
+            "smallImages": [
+                "/images/products/glasses/FLIRT FLS283/1.jpg",
+                "/images/products/glasses/FLIRT FLS283/2.jpg",
+                "/images/products/glasses/FLIRT FLS283/3.jpg",
+                "/images/products/glasses/FLIRT FLS283/4.jpg"
+            ],
             "imageAlt": "FLIRT gray glasses",
             "description": "Want to look like a cool cop? Buy one of these! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:51.187Z",
@@ -59,7 +79,12 @@
             "type": "shirt",
             "price": 25.99,
             "image": "/images/products/shirt/OXAtrres P01200/1.jpg",
-            "smallImages": "['/images/products/shirt/OXAtrres P01200/1.jpg','/images/products/shirt/OXAtrres P01200/2.jpg','/images/products/shirt/OXAtrres P01200/3.jpg','/images/products/shirt/OXAtrres P01200/4.jpg']",
+            "smallImages": [
+                "/images/products/shirt/OXAtrres P01200/1.jpg",
+                "/images/products/shirt/OXAtrres P01200/2.jpg",
+                "/images/products/shirt/OXAtrres P01200/3.jpg",
+                "/images/products/shirt/OXAtrres P01200/4.jpg"
+            ],
             "imageAlt": "OXAtrres greyish blue shirt",
             "description": "Simple. Beautiful. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:48.589Z",
@@ -72,7 +97,12 @@
             "type": "shoes",
             "price": 83.99,
             "image": "/images/products/shoes/VIVA 134/1.jpg",
-            "smallImages": "['/images/products/shoes/VIVA 134/1.jpg','/images/products/shoes/VIVA 134/2.jpg','/images/products/shoes/VIVA 134/3.jpg','/images/products/shoes/VIVA 134/4.jpg']",
+            "smallImages": [
+                "/images/products/shoes/VIVA 134/1.jpg",
+                "/images/products/shoes/VIVA 134/2.jpg",
+                "/images/products/shoes/VIVA 134/3.jpg",
+                "/images/products/shoes/VIVA 134/4.jpg"
+            ],
             "imageAlt": "VIVA Dark Blue shoes",
             "description": "Enjoy walking and never get tired! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:46.126Z",
@@ -85,7 +115,12 @@
             "type": "watch",
             "price": 100,
             "image": "/images/products/watch/Navi Force NF9068/1.jpg",
-            "smallImages": "['/images/products/watch/Navi Force NF9068/1.jpg','/images/products/watch/Navi Force NF9068/2.jpg','/images/products/watch/Navi Force NF9068/3.jpg','/images/products/watch/Navi Force NF9068/4.jpg']",
+            "smallImages": [
+                "/images/products/watch/Navi Force NF9068/1.jpg",
+                "/images/products/watch/Navi Force NF9068/2.jpg",
+                "/images/products/watch/Navi Force NF9068/3.jpg",
+                "/images/products/watch/Navi Force NF9068/4.jpg"
+            ],
             "imageAlt": "NAVI FORCE leather band watch",
             "description": "It's a work of art. Beautiful as always! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:42.790Z",
@@ -98,7 +133,12 @@
             "type": "shirt",
             "price": 18,
             "image": "/images/products/shirt/SEREZ hawaii shirt/1.jpg",
-            "smallImages": "['/images/products/shirt/SEREZ hawaii shirt/1.jpg','/images/products/shirt/SEREZ hawaii shirt/2.jpg','/images/products/shirt/SEREZ hawaii shirt/3.jpg','/images/products/shirt/SEREZ hawaii shirt/4.jpg']",
+            "smallImages": [
+                "/images/products/shirt/SEREZ hawaii shirt/1.jpg",
+                "/images/products/shirt/SEREZ hawaii shirt/2.jpg",
+                "/images/products/shirt/SEREZ hawaii shirt/3.jpg",
+                "/images/products/shirt/SEREZ hawaii shirt/4.jpg"
+            ],
             "imageAlt": "SEREZ Blue tropical Hawaii shirt",
             "description": "Cool. Colorful. Different! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:40.150Z",
@@ -111,7 +151,12 @@
             "type": "watch",
             "price": 83.99,
             "image": "/images/products/watch/Cuervo y Sobrinos/1.jpg",
-            "smallImages": "['/images/products/watch/Cuervo y Sobrinos/1.jpg','/images/products/watch/Cuervo y Sobrinos/2.jpg','/images/products/watch/Cuervo y Sobrinos/3.jpg','/images/products/watch/Cuervo y Sobrinos/4.jpg']",
+            "smallImages": [
+                "/images/products/watch/Cuervo y Sobrinos/1.jpg",
+                "/images/products/watch/Cuervo y Sobrinos/2.jpg",
+                "/images/products/watch/Cuervo y Sobrinos/3.jpg",
+                "/images/products/watch/Cuervo y Sobrinos/4.jpg"
+            ],
             "imageAlt": "Cuervo y Sobrinos dark blue band watch",
             "description": "Feel the power of classic design.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:38.086Z",
@@ -124,7 +169,12 @@
             "type": "glasses",
             "price": 63,
             "image": "/images/products/glasses/RAYBAN 62-58-001-3025/1.jpg",
-            "smallImages": "['/images/products/glasses/RAYBAN 62-58-001-3025/1.jpg','/images/products/glasses/RAYBAN 62-58-001-3025/2.jpg','/images/products/glasses/RAYBAN 62-58-001-3025/3.jpg','/images/products/glasses/RAYBAN 62-58-001-3025/4.jpg']",
+            "smallImages": [
+                "/images/products/glasses/RAYBAN 62-58-001-3025/1.jpg",
+                "/images/products/glasses/RAYBAN 62-58-001-3025/2.jpg",
+                "/images/products/glasses/RAYBAN 62-58-001-3025/3.jpg",
+                "/images/products/glasses/RAYBAN 62-58-001-3025/4.jpg"
+            ],
             "imageAlt": "RAYBAN sunglasses",
             "description": "Don't let the sun hurt your eyes anymore and also look handsome! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:34.519Z",
@@ -137,7 +187,12 @@
             "type": "shirt",
             "price": 39.20,
             "image": "/images/products/shirt/KIKI RIKI MBB2550-004/1.jpg",
-            "smallImages": "['/images/products/shirt/KIKI RIKI MBB2550-004/1.jpg','/images/products/shirt/KIKI RIKI MBB2550-004/2.jpg','/images/products/shirt/KIKI RIKI MBB2550-004/3.jpg','/images/products/shirt/KIKI RIKI MBB2550-004/4.jpg']",
+            "smallImages": [
+                "/images/products/shirt/KIKI RIKI MBB2550-004/1.jpg",
+                "/images/products/shirt/KIKI RIKI MBB2550-004/2.jpg",
+                "/images/products/shirt/KIKI RIKI MBB2550-004/3.jpg",
+                "/images/products/shirt/KIKI RIKI MBB2550-004/4.jpg"
+            ],
             "imageAlt": "KIKI RIKI red and gray shirt",
             "description": "Great shirt that everyone loves! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:30.903Z",
@@ -150,7 +205,12 @@
             "type": "glasses",
             "price": 58,
             "image": "/images/products/glasses/GOOD LOOK Gl312 C04/1.jpg",
-            "smallImages": "['/images/products/glasses/GOOD LOOK Gl312 C04/1.jpg','/images/products/glasses/GOOD LOOK Gl312 C04/2.jpg','/images/products/glasses/GOOD LOOK Gl312 C04/3.jpg','/images/products/glasses/GOOD LOOK Gl312 C04/4.jpg']",
+            "smallImages": [
+                "/images/products/glasses/GOOD LOOK Gl312 C04/1.jpg",
+                "/images/products/glasses/GOOD LOOK Gl312 C04/2.jpg",
+                "/images/products/glasses/GOOD LOOK Gl312 C04/3.jpg",
+                "/images/products/glasses/GOOD LOOK Gl312 C04/4.jpg"
+            ],
             "imageAlt": "GOOD LOOK sunglasses",
             "description": "Look good whith GOOD LOOK sunglasses! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:28.434Z",
@@ -163,7 +223,12 @@
             "type": "shoes",
             "price": 74.60,
             "image": "/images/products/shoes/PAMA TT-Walker G1086/1.jpg",
-            "smallImages": "['/images/products/shoes/PAMA TT-Walker G1086/1.jpg','/images/products/shoes/PAMA TT-Walker G1086/2.jpg','/images/products/shoes/PAMA TT-Walker G1086/3.jpg','/images/products/shoes/PAMA TT-Walker G1086/4.jpg']",
+            "smallImages": [
+                "/images/products/shoes/PAMA TT-Walker G1086/1.jpg",
+                "/images/products/shoes/PAMA TT-Walker G1086/2.jpg",
+                "/images/products/shoes/PAMA TT-Walker G1086/3.jpg",
+                "/images/products/shoes/PAMA TT-Walker G1086/4.jpg"
+            ],
             "imageAlt": "PAMA 2020 hiking shoes",
             "description": "Want to go for hiking? Buy these! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:25.990Z",
@@ -176,7 +241,12 @@
             "type": "watch",
             "price": 80,
             "image": "/images/products/watch/skemi 9185/1.jpg",
-            "smallImages": "['/images/products/watch/skemi 9185/1.jpg','/images/products/watch/skemi 9185/2.jpg','/images/products/watch/skemi 9185/3.jpg','/images/products/watch/skemi 9185/4.jpg']",
+            "smallImages": [
+                "/images/products/watch/skemi 9185/1.jpg",
+                "/images/products/watch/skemi 9185/2.jpg",
+                "/images/products/watch/skemi 9185/3.jpg",
+                "/images/products/watch/skemi 9185/4.jpg"
+            ],
             "imageAlt": "SKMEI full black watch",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:22.479Z",
@@ -189,7 +259,12 @@
             "type": "glasses",
             "price": 60.99,
             "image": "/images/products/glasses/RAYBAN W3280-58/1.jpg",
-            "smallImages": "['/images/products/glasses/RAYBAN W3280-58/1.jpg','/images/products/glasses/RAYBAN W3280-58/2.jpg','/images/products/glasses/RAYBAN W3280-58/3.jpg','/images/products/glasses/RAYBAN W3280-58/4.jpg']",
+            "smallImages": [
+                "/images/products/glasses/RAYBAN W3280-58/1.jpg",
+                "/images/products/glasses/RAYBAN W3280-58/2.jpg",
+                "/images/products/glasses/RAYBAN W3280-58/3.jpg",
+                "/images/products/glasses/RAYBAN W3280-58/4.jpg"
+            ],
             "imageAlt": "RAYBAN sunglasses",
             "description": "Nice green sunglasses. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:19.322Z",
@@ -202,7 +277,12 @@
             "type": "socks",
             "price": 10,
             "image": "/images/products/socks/PALOOTE PM-3Line/1.jpg",
-            "smallImages": "['/images/products/socks/PALOOTE PM-3Line/1.jpg','/images/products/socks/PALOOTE PM-3Line/2.jpg','/images/products/socks/PALOOTE PM-3Line/3.jpg','/images/products/socks/PALOOTE PM-3Line/4.jpg']",
+            "smallImages": [
+                "/images/products/socks/PALOOTE PM-3Line/1.jpg",
+                "/images/products/socks/PALOOTE PM-3Line/2.jpg",
+                "/images/products/socks/PALOOTE PM-3Line/3.jpg",
+                "/images/products/socks/PALOOTE PM-3Line/4.jpg"
+            ],
             "imageAlt": "PM-3Line socks",
             "description": "Feel comfortable. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:13.273Z",
@@ -215,7 +295,12 @@
             "type": "shoes",
             "price": 73,
             "image": "/images/products/shoes/PAMA Samuel G1421/1.jpg",
-            "smallImages": "['/images/products/shoes/PAMA Samuel G1421/1.jpg','/images/products/shoes/PAMA Samuel G1421/2.jpg','/images/products/shoes/PAMA Samuel G1421/3.jpg','/images/products/shoes/PAMA Samuel G1421/4.jpg']",
+            "smallImages": [
+                "/images/products/shoes/PAMA Samuel G1421/1.jpg",
+                "/images/products/shoes/PAMA Samuel G1421/2.jpg",
+                "/images/products/shoes/PAMA Samuel G1421/3.jpg",
+                "/images/products/shoes/PAMA Samuel G1421/4.jpg"
+            ],
             "imageAlt": "PAMA sport shoes",
             "description": "Great sport shoes Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:27:50.087Z",
@@ -228,7 +313,12 @@
             "type": "socks",
             "price": 14,
             "image": "/images/products/socks/PALOOTE PM-SRP222/1.jpg",
-            "smallImages": "['/images/products/socks/PALOOTE PM-SRP222/1.jpg','/images/products/socks/PALOOTE PM-SRP222/2.jpg','/images/products/socks/PALOOTE PM-SRP222/3.jpg','/images/products/socks/PALOOTE PM-SRP222/4.jpg']",
+            "smallImages": [
+                "/images/products/socks/PALOOTE PM-SRP222/1.jpg",
+                "/images/products/socks/PALOOTE PM-SRP222/2.jpg",
+                "/images/products/socks/PALOOTE PM-SRP222/3.jpg",
+                "/images/products/socks/PALOOTE PM-SRP222/4.jpg"
+            ],
             "imageAlt": "PM-3Line socks",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:27:07.986Z",
@@ -241,7 +331,12 @@
             "type": "socks",
             "price": 13,
             "image": "/images/products/socks/AKAM 884/1.jpg",
-            "smallImages": "['/images/products/socks/AKAM 884/1.jpg','/images/products/socks/AKAM 884/2.jpg','/images/products/socks/AKAM 884/3.jpg','/images/products/socks/AKAM 884/4.jpg']",
+            "smallImages": [
+                "/images/products/socks/AKAM 884/1.jpg",
+                "/images/products/socks/AKAM 884/2.jpg",
+                "/images/products/socks/AKAM 884/3.jpg",
+                "/images/products/socks/AKAM 884/4.jpg"
+            ],
             "imageAlt": "AKAM 884 socks",
             "description": "6-pair colorful socks. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-17T18:27:07.986Z",
@@ -254,7 +349,12 @@
             "type": "socks",
             "price": 20,
             "image": "/images/products/socks/el7 PH615/1.jpg",
-            "smallImages": "['/images/products/socks/el7 PH615/1.jpg','/images/products/socks/el7 PH615/2.jpg','/images/products/socks/el7 PH615/3.jpg','/images/products/socks/el7 PH615/4.jpg']",
+            "smallImages": [
+                "/images/products/socks/el7 PH615/1.jpg",
+                "/images/products/socks/el7 PH615/2.jpg",
+                "/images/products/socks/el7 PH615/3.jpg",
+                "/images/products/socks/el7 PH615/4.jpg"
+            ],
             "imageAlt": "el7 PH615 socks",
             "description": "6-pair colorful High quality socks. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-17T18:27:07.986Z",
@@ -269,7 +369,12 @@
             "type": "watch",
             "price": 83.99,
             "image": "/images/products/watch/Seiko SRQ015J1/1.jpg",
-            "smallImages": "['/images/products/watch/Seiko SRQ015J1/1.jpg','/images/products/watch/Seiko SRQ015J1/2.jpg','/images/products/watch/Seiko SRQ015J1/3.jpg','/images/products/watch/Seiko SRQ015J1/4.jpg']",
+            "smallImages": [
+                "/images/products/watch/Seiko SRQ015J1/1.jpg",
+                "/images/products/watch/Seiko SRQ015J1/2.jpg",
+                "/images/products/watch/Seiko SRQ015J1/3.jpg",
+                "/images/products/watch/Seiko SRQ015J1/4.jpg"
+            ],
             "imageAlt": "SEIKO watch with metal band",
             "description": "A great watch for men who love being different. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:31:54.394Z",
@@ -282,7 +387,12 @@
             "type": "shirt",
             "price": 36,
             "image": "/images/products/shirt/Hawaii R.S.K.O MB-01/1.jpg",
-            "smallImages": "['/images/products/shirt/Hawaii R.S.K.O MB-01/1.jpg','/images/products/shirt/Hawaii R.S.K.O MB-01/2.jpg','/images/products/shirt/Hawaii R.S.K.O MB-01/3.jpg','/images/products/shirt/Hawaii R.S.K.O MB-01/4.jpg']",
+            "smallImages": [
+                "/images/products/shirt/Hawaii R.S.K.O MB-01/1.jpg",
+                "/images/products/shirt/Hawaii R.S.K.O MB-01/2.jpg",
+                "/images/products/shirt/Hawaii R.S.K.O MB-01/3.jpg",
+                "/images/products/shirt/Hawaii R.S.K.O MB-01/4.jpg"
+            ],
             "imageAlt": "R.S.K.O HAWAII black tropical shirt",
             "description": "Enjoy your summer vacation with this shirt.It's amazing! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:55.830Z",
@@ -295,7 +405,12 @@
             "type": "shoes",
             "price": 65,
             "image": "/images/products/shoes/All Star High BL/1.jpg",
-            "smallImages": "['/images/products/shoes/All Star High BL/1.jpg','/images/products/shoes/All Star High BL/2.jpg','/images/products/shoes/All Star High BL/3.jpg','/images/products/shoes/All Star High BL/4.jpg']",
+            "smallImages": [
+                "/images/products/shoes/All Star High BL/1.jpg",
+                "/images/products/shoes/All Star High BL/2.jpg",
+                "/images/products/shoes/All Star High BL/3.jpg",
+                "/images/products/shoes/All Star High BL/4.jpg"
+            ],
             "imageAlt": "ALL STAR High BL shoes",
             "description": "Everyone loves these! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:53.702Z",
@@ -308,7 +423,12 @@
             "type": "glasses",
             "price": 66.99,
             "image": "/images/products/glasses/FLIRT FLS283/1.jpg",
-            "smallImages": "['/images/products/glasses/FLIRT FLS283/1.jpg','/images/products/glasses/FLIRT FLS283/1.jpg','/images/products/glasses/FLIRT FLS283/1.jpg','/images/products/glasses/FLIRT FLS283/1.jpg']",
+            "smallImages": [
+                "/images/products/glasses/FLIRT FLS283/1.jpg",
+                "/images/products/glasses/FLIRT FLS283/2.jpg",
+                "/images/products/glasses/FLIRT FLS283/3.jpg",
+                "/images/products/glasses/FLIRT FLS283/4.jpg"
+            ],
             "imageAlt": "FLIRT gray glasses",
             "description": "Want to look like a cool cop? Buy one of these! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:51.187Z",
@@ -321,7 +441,12 @@
             "type": "shirt",
             "price": 25.99,
             "image": "/images/products/shirt/OXAtrres P01200/1.jpg",
-            "smallImages": "['/images/products/shirt/OXAtrres P01200/1.jpg','/images/products/shirt/OXAtrres P01200/2.jpg','/images/products/shirt/OXAtrres P01200/3.jpg','/images/products/shirt/OXAtrres P01200/4.jpg']",
+            "smallImages": [
+                "/images/products/shirt/OXAtrres P01200/1.jpg",
+                "/images/products/shirt/OXAtrres P01200/2.jpg",
+                "/images/products/shirt/OXAtrres P01200/3.jpg",
+                "/images/products/shirt/OXAtrres P01200/4.jpg"
+            ],
             "imageAlt": "OXAtrres greyish blue shirt",
             "description": "Simple. Beautiful. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:48.589Z",
@@ -334,7 +459,12 @@
             "type": "shoes",
             "price": 83.99,
             "image": "/images/products/shoes/VIVA 134/1.jpg",
-            "smallImages": "['/images/products/shoes/VIVA 134/1.jpg','/images/products/shoes/VIVA 134/2.jpg','/images/products/shoes/VIVA 134/3.jpg','/images/products/shoes/VIVA 134/4.jpg']",
+            "smallImages": [
+                "/images/products/shoes/VIVA 134/1.jpg",
+                "/images/products/shoes/VIVA 134/2.jpg",
+                "/images/products/shoes/VIVA 134/3.jpg",
+                "/images/products/shoes/VIVA 134/4.jpg"
+            ],
             "imageAlt": "VIVA Dark Blue shoes",
             "description": "Enjoy walking and never get tired! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:46.126Z",
@@ -347,7 +477,12 @@
             "type": "watch",
             "price": 100,
             "image": "/images/products/watch/Navi Force NF9068/1.jpg",
-            "smallImages": "['/images/products/watch/Navi Force NF9068/1.jpg','/images/products/watch/Navi Force NF9068/2.jpg','/images/products/watch/Navi Force NF9068/3.jpg','/images/products/watch/Navi Force NF9068/4.jpg']",
+            "smallImages": [
+                "/images/products/watch/Navi Force NF9068/1.jpg",
+                "/images/products/watch/Navi Force NF9068/2.jpg",
+                "/images/products/watch/Navi Force NF9068/3.jpg",
+                "/images/products/watch/Navi Force NF9068/4.jpg"
+            ],
             "imageAlt": "NAVI FORCE leather band watch",
             "description": "It's a work of art. Beautiful as always! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:42.790Z",
@@ -360,7 +495,12 @@
             "type": "shirt",
             "price": 18,
             "image": "/images/products/shirt/SEREZ hawaii shirt/1.jpg",
-            "smallImages": "['/images/products/shirt/SEREZ hawaii shirt/1.jpg','/images/products/shirt/SEREZ hawaii shirt/2.jpg','/images/products/shirt/SEREZ hawaii shirt/3.jpg','/images/products/shirt/SEREZ hawaii shirt/4.jpg']",
+            "smallImages": [
+                "/images/products/shirt/SEREZ hawaii shirt/1.jpg",
+                "/images/products/shirt/SEREZ hawaii shirt/2.jpg",
+                "/images/products/shirt/SEREZ hawaii shirt/3.jpg",
+                "/images/products/shirt/SEREZ hawaii shirt/4.jpg"
+            ],
             "imageAlt": "SEREZ Blue tropical Hawaii shirt",
             "description": "Cool. Colorful. Different! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:40.150Z",
@@ -373,7 +513,12 @@
             "type": "watch",
             "price": 83.99,
             "image": "/images/products/watch/Cuervo y Sobrinos/1.jpg",
-            "smallImages": "['/images/products/watch/Cuervo y Sobrinos/1.jpg','/images/products/watch/Cuervo y Sobrinos/2.jpg','/images/products/watch/Cuervo y Sobrinos/3.jpg','/images/products/watch/Cuervo y Sobrinos/4.jpg']",
+            "smallImages": [
+                "/images/products/watch/Cuervo y Sobrinos/1.jpg",
+                "/images/products/watch/Cuervo y Sobrinos/2.jpg",
+                "/images/products/watch/Cuervo y Sobrinos/3.jpg",
+                "/images/products/watch/Cuervo y Sobrinos/4.jpg"
+            ],
             "imageAlt": "Cuervo y Sobrinos dark blue band watch",
             "description": "Feel the power of classic design.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:38.086Z",
@@ -386,7 +531,12 @@
             "type": "glasses",
             "price": 63,
             "image": "/images/products/glasses/RAYBAN 62-58-001-3025/1.jpg",
-            "smallImages": "['/images/products/glasses/RAYBAN 62-58-001-3025/1.jpg','/images/products/glasses/RAYBAN 62-58-001-3025/2.jpg','/images/products/glasses/RAYBAN 62-58-001-3025/3.jpg','/images/products/glasses/RAYBAN 62-58-001-3025/4.jpg']",
+            "smallImages": [
+                "/images/products/glasses/RAYBAN 62-58-001-3025/1.jpg",
+                "/images/products/glasses/RAYBAN 62-58-001-3025/2.jpg",
+                "/images/products/glasses/RAYBAN 62-58-001-3025/3.jpg",
+                "/images/products/glasses/RAYBAN 62-58-001-3025/4.jpg"
+            ],
             "imageAlt": "RAYBAN sunglasses",
             "description": "Don't let the sun hurt your eyes anymore and also look handsome! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:34.519Z",
@@ -401,7 +551,12 @@
             "type": "shirt",
             "price": 39.20,
             "image": "/images/products/shirt/KIKI RIKI MBB2550-004/1.jpg",
-            "smallImages": "['/images/products/shirt/KIKI RIKI MBB2550-004/1.jpg','/images/products/shirt/KIKI RIKI MBB2550-004/2.jpg','/images/products/shirt/KIKI RIKI MBB2550-004/3.jpg','/images/products/shirt/KIKI RIKI MBB2550-004/4.jpg']",
+            "smallImages": [
+                "/images/products/shirt/KIKI RIKI MBB2550-004/1.jpg",
+                "/images/products/shirt/KIKI RIKI MBB2550-004/2.jpg",
+                "/images/products/shirt/KIKI RIKI MBB2550-004/3.jpg",
+                "/images/products/shirt/KIKI RIKI MBB2550-004/4.jpg"
+            ],
             "imageAlt": "KIKI RIKI red and gray shirt",
             "description": "Great shirt that everyone loves! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:30.903Z",
@@ -414,7 +569,12 @@
             "type": "glasses",
             "price": 58,
             "image": "/images/products/glasses/GOOD LOOK Gl312 C04/1.jpg",
-            "smallImages": "['/images/products/glasses/GOOD LOOK Gl312 C04/1.jpg','/images/products/glasses/GOOD LOOK Gl312 C04/2.jpg','/images/products/glasses/GOOD LOOK Gl312 C04/3.jpg','/images/products/glasses/GOOD LOOK Gl312 C04/4.jpg']",
+            "smallImages": [
+                "/images/products/glasses/GOOD LOOK Gl312 C04/1.jpg",
+                "/images/products/glasses/GOOD LOOK Gl312 C04/2.jpg",
+                "/images/products/glasses/GOOD LOOK Gl312 C04/3.jpg",
+                "/images/products/glasses/GOOD LOOK Gl312 C04/4.jpg"
+            ],
             "imageAlt": "GOOD LOOK sunglasses",
             "description": "Look good whith GOOD LOOK sunglasses! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:28.434Z",
@@ -427,7 +587,12 @@
             "type": "shoes",
             "price": 74.60,
             "image": "/images/products/shoes/PAMA TT-Walker G1086/1.jpg",
-            "smallImages": "['/images/products/shoes/PAMA TT-Walker G1086/1.jpg','/images/products/shoes/PAMA TT-Walker G1086/2.jpg','/images/products/shoes/PAMA TT-Walker G1086/3.jpg','/images/products/shoes/PAMA TT-Walker G1086/4.jpg']",
+            "smallImages": [
+                "/images/products/shoes/PAMA TT-Walker G1086/1.jpg",
+                "/images/products/shoes/PAMA TT-Walker G1086/2.jpg",
+                "/images/products/shoes/PAMA TT-Walker G1086/3.jpg",
+                "/images/products/shoes/PAMA TT-Walker G1086/4.jpg"
+            ],
             "imageAlt": "PAMA 2020 hiking shoes",
             "description": "Want to go for hiking? Buy these! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:25.990Z",
@@ -440,7 +605,12 @@
             "type": "watch",
             "price": 80,
             "image": "/images/products/watch/skemi 9185/1.jpg",
-            "smallImages": "['/images/products/watch/skemi 9185/1.jpg','/images/products/watch/skemi 9185/2.jpg','/images/products/watch/skemi 9185/3.jpg','/images/products/watch/skemi 9185/4.jpg']",
+            "smallImages": [
+                "/images/products/watch/skemi 9185/1.jpg",
+                "/images/products/watch/skemi 9185/2.jpg",
+                "/images/products/watch/skemi 9185/3.jpg",
+                "/images/products/watch/skemi 9185/4.jpg"
+            ],
             "imageAlt": "SKMEI full black watch",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:22.479Z",
@@ -453,7 +623,12 @@
             "type": "glasses",
             "price": 60.99,
             "image": "/images/products/glasses/RAYBAN W3280-58/1.jpg",
-            "smallImages": "['/images/products/glasses/RAYBAN W3280-58/1.jpg','/images/products/glasses/RAYBAN W3280-58/2.jpg','/images/products/glasses/RAYBAN W3280-58/3.jpg','/images/products/glasses/RAYBAN W3280-58/4.jpg']",
+            "smallImages": [
+                "/images/products/glasses/RAYBAN W3280-58/1.jpg",
+                "/images/products/glasses/RAYBAN W3280-58/2.jpg",
+                "/images/products/glasses/RAYBAN W3280-58/3.jpg",
+                "/images/products/glasses/RAYBAN W3280-58/4.jpg"
+            ],
             "imageAlt": "RAYBAN sunglasses",
             "description": "Nice green sunglasses. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:19.322Z",
@@ -466,7 +641,12 @@
             "type": "socks",
             "price": 10,
             "image": "/images/products/socks/PALOOTE PM-3Line/1.jpg",
-            "smallImages": "['/images/products/socks/PALOOTE PM-3Line/1.jpg','/images/products/socks/PALOOTE PM-3Line/2.jpg','/images/products/socks/PALOOTE PM-3Line/3.jpg','/images/products/socks/PALOOTE PM-3Line/4.jpg']",
+            "smallImages": [
+                "/images/products/socks/PALOOTE PM-3Line/1.jpg",
+                "/images/products/socks/PALOOTE PM-3Line/2.jpg",
+                "/images/products/socks/PALOOTE PM-3Line/3.jpg",
+                "/images/products/socks/PALOOTE PM-3Line/4.jpg"
+            ],
             "imageAlt": "PM-3Line socks",
             "description": "Feel comfortable. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:28:13.273Z",
@@ -479,7 +659,12 @@
             "type": "shoes",
             "price": 73,
             "image": "/images/products/shoes/PAMA Samuel G1421/1.jpg",
-            "smallImages": "['/images/products/shoes/PAMA Samuel G1421/1.jpg','/images/products/shoes/PAMA Samuel G1421/2.jpg','/images/products/shoes/PAMA Samuel G1421/3.jpg','/images/products/shoes/PAMA Samuel G1421/4.jpg']",
+            "smallImages": [
+                "/images/products/shoes/PAMA Samuel G1421/1.jpg",
+                "/images/products/shoes/PAMA Samuel G1421/2.jpg",
+                "/images/products/shoes/PAMA Samuel G1421/3.jpg",
+                "/images/products/shoes/PAMA Samuel G1421/4.jpg"
+            ],
             "imageAlt": "PAMA sport shoes",
             "description": "Great sport shoes Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:27:50.087Z",
@@ -492,7 +677,12 @@
             "type": "socks",
             "price": 14,
             "image": "/images/products/socks/PALOOTE PM-SRP222/1.jpg",
-            "smallImages": "['/images/products/socks/PALOOTE PM-SRP222/1.jpg','/images/products/socks/PALOOTE PM-SRP222/2.jpg','/images/products/socks/PALOOTE PM-SRP222/3.jpg','/images/products/socks/PALOOTE PM-SRP222/4.jpg']",
+            "smallImages": [
+                "/images/products/socks/PALOOTE PM-SRP222/1.jpg",
+                "/images/products/socks/PALOOTE PM-SRP222/2.jpg",
+                "/images/products/socks/PALOOTE PM-SRP222/3.jpg",
+                "/images/products/socks/PALOOTE PM-SRP222/4.jpg"
+            ],
             "imageAlt": "PM-3Line socks",
             "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
             "date": "2022-09-18T18:27:07.986Z",
@@ -505,10 +695,15 @@
             "type": "socks",
             "price": 13,
             "image": "/images/products/socks/AKAM 884/1.jpg",
-            "smallImages": "['/images/products/socks/AKAM 884/1.jpg','/images/products/socks/AKAM 884/2.jpg','/images/products/socks/AKAM 884/3.jpg','/images/products/socks/AKAM 884/4.jpg']",
+            "smallImages": [
+                "/images/products/socks/AKAM 884/1.jpg",
+                "/images/products/socks/AKAM 884/2.jpg",
+                "/images/products/socks/AKAM 884/3.jpg",
+                "/images/products/socks/AKAM 884/4.jpg"
+            ],
             "imageAlt": "AKAM 884 socks",
             "description": "6-pair colorful socks. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
-            "date": "2022-09-21T09:34:16.917Z",
+            "date": "2022-09-17T18:27:07.986Z",
             "rate": 4.0
         },
         {
@@ -518,10 +713,15 @@
             "type": "socks",
             "price": 20,
             "image": "/images/products/socks/el7 PH615/1.jpg",
-            "smallImages": "['/images/products/socks/el7 PH615/1.jpg','/images/products/socks/el7 PH615/2.jpg','/images/products/socks/el7 PH615/3.jpg','/images/products/socks/el7 PH615/4.jpg']",
+            "smallImages": [
+                "/images/products/socks/el7 PH615/1.jpg",
+                "/images/products/socks/el7 PH615/2.jpg",
+                "/images/products/socks/el7 PH615/3.jpg",
+                "/images/products/socks/el7 PH615/4.jpg"
+            ],
             "imageAlt": "el7 PH615 socks",
             "description": "6-pair colorful High quality socks. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia error voluptatem inventore.",
-            "date": "2022-09-21T09:34:41.444Z",
+            "date": "2022-09-17T18:27:07.986Z",
             "rate": 4.5
         }
     ]
