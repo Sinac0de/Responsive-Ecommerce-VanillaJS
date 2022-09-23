@@ -19,7 +19,7 @@ export default class Product {
         } else {//clicked on the product card 
             const productId = e.currentTarget.dataset.id;
             const root = document.querySelector("main");
-            this.createProductPage(productId, productsList, root);
+            new SProduct(productId, productsList, root);
         }
     }
 
@@ -65,87 +65,6 @@ export default class Product {
         return div;
     }
 
-    static createProductPage(id, products, root) {
-        const product = products.filter(p => p.id == id);
-        const { title, type, price, image, smallImages, description } = product[0];
 
-        window.scroll({//scroll to top
-            top: 0,
-        });
-
-        //change the page content
-        root.innerHTML = `<section id="s-product">
-                        <div class="s-product-img-container">
-                            <img src="${image}" class="s-product-img-big">
-                            <div class="s-product-img-row">
-                                <div class="s-product-img-col">
-                                    <img src="${smallImages[0]}" class="s-product-img-small">
-                                </div>
-                                <div class="s-product-img-col">
-                                    <img src="${smallImages[1]}" class="s-product-img-small">
-                                </div>
-                                <div class="s-product-img-col">
-                                    <img src="${smallImages[2]}" class="s-product-img-small">
-                                </div>
-                                <div class="s-product-img-col">
-                                    <img src="${smallImages[3]}" class="s-product-img-small">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="s-product-info">
-                            <h4 class="s-product-type">${type}</h4>
-                            <h2 class="s-product-title">${title}</h2>
-                            <h2 class="s-product-price">$${price}</h2>
-                            <div class="s-product-add-to-cart">
-                                <button class="s-product-btn" data-id="${id}">Add To Cart</button>
-                                <div class="s-product-quantity quantity-container">
-                                    <button id="cart-product-minus">-</button>
-                                    <span id="quantity">1</span>
-                                    <button id="cart-product-plus">+</button>
-                                </div>
-                            </div>
-                            <h4>Product Details:</h4>
-                            <p class="s-product-desc">${description}</p>
-                        </div>
-                    </section>
-
-                    <section class="featured-products">
-                        <h2>Featured Products</h2>
-                        <p>Level up your style with our products</p>
-                        <div class="slider-container swiper mySwiper">
-
-                            <div class="slider-products swiper-wrapper">
-                                <template class="template-product">
-                                <div class="product swiper-slide product-skeleton">
-                                    <div class="product-img skeleton" loading="lazy"></div>
-                                    <div class="product-description">
-                                        <div class="product-brand-stars">
-                                            <div class="skeleton skeleton-brand"></div>
-                                            <div class="skeleton skeleton-rating"></div>
-                                        </div>
-                                        <div class="skeleton skeleton-title"></div>
-                                        <div class="skeleton skeleton-title"></div>
-                                        <h5 class="skeleton skeleton-price"></h5>
-                                    </div>
-                                </div>
-                                </template>
-                            </div>
-
-
-                            <div class="swiper-button-next slider-next"></div>
-                            <div class="swiper-button-prev slider-prev"></div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </section>
-                </main>`;
-
-        //remove active nav items
-        document.querySelector(".active-nav-item").classList.remove("active-nav-item");
-        //set all the # links to original link
-        document.querySelectorAll("[href='#']").forEach(link => link.setAttribute("href", window.location.pathname));
-
-        //create and navigate to product details page
-        new SProduct(id);
-    }
 
 }
