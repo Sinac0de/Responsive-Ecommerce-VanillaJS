@@ -18,8 +18,8 @@ export default class Product {
             Product.addToCart(btnId);
         } else {//clicked on the product card 
             const productId = e.currentTarget.dataset.id;
-            const htmlBody = document.body;
-            this.createProductPage(productId, productsList, htmlBody);
+            const root = document.querySelector("main");
+            this.createProductPage(productId, productsList, root);
         }
     }
 
@@ -65,7 +65,7 @@ export default class Product {
         return div;
     }
 
-    static createProductPage(id, products, htmlBody) {
+    static createProductPage(id, products, root) {
         const product = products.filter(p => p.id == id);
         const { title, type, price, image, smallImages, description } = product[0];
 
@@ -74,29 +74,7 @@ export default class Product {
         });
 
         //change the page content
-        htmlBody.innerHTML = `<header>
-                    <h1 class="nav-logo"><a href="index.html">WearMe</a></h1>
-                    <ul class="nav-items">
-                        <button class="sidebar-closer">&times;</button>
-                        <div id="nav-links">
-                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                            <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
-                            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                            <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
-                            <li class="nav-item"><a href="FAQ.html" class="nav-link">FAQ</a></li>
-                        </div>
-                        <div class="sidebar-btns">
-                            <a class="nav-btn" href="cart.html">My Cart <i class="fa-solid fa-bag-shopping"></i></a>
-                            <a class="nav-btn" href="sign-in.html">My Account <i class="fa-solid fa-user"></i></a>
-                        </div>
-                    </ul>
-                    <button class="sidebar-opener"><i class="fa-solid fa-bars"></i></button>
-                    <div class="sidebar-backdrop"></div>
-                </header>
-
-                <main>
-
-                    <section id="s-product">
+        root.innerHTML = `<section id="s-product">
                         <div class="s-product-img-container">
                             <img src="${image}" class="s-product-img-big">
                             <div class="s-product-img-row">
@@ -159,59 +137,12 @@ export default class Product {
                             <div class="swiper-pagination"></div>
                         </div>
                     </section>
-                </main>
+                </main>`;
 
-                <footer>
-                    <div class="footer-row">
-                        <div class="footer-col">
-                            <h1 class="footer-logo">WearMe</h1>
-                            <h3>Contact</h3>
-                            <p><strong>Address: </strong>Kermanshah,Iran</p>
-                            <p><strong>Email: </strong>support@wearme.com</p>
-                            <p><strong>Hours: </strong>10:00 - 18:00.Mon - Sat</p>
-                            <h3>Follow Us</h3>
-                            <div class="footer-socials">
-                                <a href="https://www.facebook.com/" id="facebook"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="https://twitter.com/" id="twitter"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="https://www.instagram.com/" id="instagram"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="https://www.pinterest.com/" id="pinterest"><i class="fa-brands fa-pinterest"></i></a>
-                                <a href="https://youtube.com/" id="youtube"><i class="fa-brands fa-youtube"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="footer-col">
-                            <h3>About</h3>
-                            <a href="about.html">About Us</a>
-                            <a href="FAQ.html">Delivery Information</a>
-                            <a href="FAQ.html">Privacy Policy</a>
-                            <a href="FAQ.html">Terms & Conditions</a>
-                            <a href="contact-us.html">Contact Us</a>
-                        </div>
-
-                        <div class="footer-col">
-                            <h3>My Account</h3>
-                            <a href="sign-in.html">Sign In</a>
-                            <a href="cart.html">View Cart</a>
-                            <a href="cart.html">Track My Order</a>
-                            <a href="FAQ.html">Help</a>
-                        </div>
-                        <div id="install-app" class="footer-col">
-                            <h3>Install App</h3>
-                            <p>From App Store or Google Play Store</p>
-                            <a href="https://www.apple.com/app-store" class="btn"><i class="fa-brands fa-app-store"></i> app
-                                store</a>
-                            <a href="https://play.google.com/" class="btn"><i class="fa-brands fa-google-play"></i> Google
-                                Play</a>
-                        </div>
-                    </div>
-                    <div class="credit">
-                        <p>&copy;2022 WearMe</p>
-                        <p>Made with ♥ by <a href="https://github.com/Sinac0de">Sina Moradian</a></p>
-                    </div>
-                </footer>
-                <script src="js/essentials.js"></script>
-                <script src="js/swiper-bundle.min.js"></script>
-            <script src="js/s-product.js"></script>`;
+        //remove active nav items
+        document.querySelector(".active-nav-item").classList.remove("active-nav-item");
+        //set all the # links to original link
+        document.querySelectorAll("[href='#']").forEach(link => link.setAttribute("href", window.location.pathname));
 
         //create and navigate to product details page
         new SProduct(id);
