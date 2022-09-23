@@ -1070,6 +1070,10 @@ footer {
     gap: 1em;
 }
 
+.s-product-img-col {
+    width: 100%;
+}
+
 .s-product-img-small {
     cursor: pointer;
 }
