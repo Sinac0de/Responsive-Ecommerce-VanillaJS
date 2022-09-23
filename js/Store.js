@@ -20,7 +20,7 @@ async function setup() {
 
     //get products from api
     const productApi =
-        axios.get("https://api.npoint.io/1457b931488d039da03f").then(res => {
+        axios.get("https://api.npoint.io/ca6b5ba76fcbfafeffac").then(res => {
             return res.data.items;//all products
         }).catch(err => console.log(err));
 
@@ -86,7 +86,6 @@ function searchProducts(e) {
             e.target.blur();//unfocus the search bar
             window.scroll({//scroll down a little
                 top: 50,
-                behavior: 'smooth'
             });
         }
     });
@@ -162,9 +161,5 @@ function renderProducts(products) {
         storeProductsDiv.append(productDiv);
     });
     //add event listener to products card
-    Product.setEventListener();
+    Product.setEventListener(allproducts);
 }
-
-
-
-
