@@ -58,7 +58,7 @@ button {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     border-bottom: var(--border-seprator);
     position: sticky;
     top: 0;
@@ -163,6 +163,7 @@ header {
     font-family: var(--font-fantasy);
     font-size: 2rem;
     margin-left: .5em;
+    position: relative;
 }
 
 .nav-item {
@@ -1739,6 +1740,7 @@ footer {
     Single Product page
 =======================*/
 
+
     .s-product-img-container {
         margin: 0 auto;
         width: 50%;
@@ -2500,6 +2502,10 @@ footer {
         flex-direction: row;
         justify-content: center;
         min-height: 50vh;
+    }
+
+    .go-back-btn {
+        position: relative;
     }
 
 
