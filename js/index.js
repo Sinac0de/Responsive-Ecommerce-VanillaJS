@@ -61,6 +61,7 @@ function setup() {
     axios.get("https://api.npoint.io/ca6b5ba76fcbfafeffac").then(res => {
         const featuredProducts = res.data.featured;//featured products
         const newArrivalProducts = res.data.newArrival;//featured products
+        const allproducts = res.data.items;//all products
 
         featuredProductsDiv.innerHTML = "";
         newArrivalProductsDiv.innerHTML = "";
@@ -80,7 +81,7 @@ function setup() {
         });
 
         //add event listener to products card
-        Product.setEventListener();
+        Product.setEventListener(allproducts);
 
     }).catch(err => console.log(err));
 }
