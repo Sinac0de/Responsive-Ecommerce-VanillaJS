@@ -58,7 +58,7 @@ function setup() {
     };
 
     /*--get and replace products in the featured and newArrival section--*/
-    axios.get("https://api.npoint.io/1457b931488d039da03f").then(res => {
+    axios.get("https://api.npoint.io/ca6b5ba76fcbfafeffac").then(res => {
         const featuredProducts = res.data.featured;//featured products
         const newArrivalProducts = res.data.newArrival;//featured products
 
