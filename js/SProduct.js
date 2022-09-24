@@ -3,6 +3,7 @@ export default class SProduct {
     constructor(id, products, root) {
         this.createProductPage(id, products, root);
         this.featuredSection();//create featured products
+        this.imgController();
         window.scroll({//scroll to the top
             top: 0
         });
@@ -39,7 +40,7 @@ export default class SProduct {
                         <div class="s-product-info">
                             <h4 class="s-product-type">${type}</h4>
                             <h2 class="s-product-title">${title}</h2>
-                            <h2 class="s-product-price">$${price}</h2>
+                            <h2 class="s-product-price gradient-bg">$${price}</h2>
                             <div class="s-product-add-to-cart">
                                 <button class="s-product-btn" data-id="${id}">Add To Cart</button>
                                 <div class="s-product-quantity quantity-container">
@@ -171,5 +172,17 @@ export default class SProduct {
             Product.setEventListener(allproducts);
 
         }).catch(err => console.log(err));
+    }
+
+    //change the big picture 
+    imgController() {
+        const smallImages = document.querySelectorAll(".s-product-img-small");
+        const bigImage = document.querySelector(".s-product-img-big");
+
+        smallImages.forEach(img => {
+            img.addEventListener("click", (e) => {
+                bigImage.setAttribute("src", e.target.src);
+            });
+        });
     }
 }
