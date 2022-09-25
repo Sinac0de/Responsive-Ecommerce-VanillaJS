@@ -33,9 +33,23 @@ export default class CartLogic {
 
     }
 
-    static calculateQuantity() {
+    static totalPrice() {
         const cart = Storage.getCart();
+        const totalprice = cart.reduce((prev, curr) => {
+            const price = curr.price;
+            return prev + quantity;
+        }, 0);
+        return totalPrice.toFixed(2);
 
+    }
+
+    static totalQuantity() {
+        const cart = Storage.getCart();
+        const totalQuantity = cart.reduce((prev, curr) => {
+            const quantity = curr.quantity;
+            return prev + quantity;
+        }, 0);
+        return totalQuantity;
     }
 
     static addToCartBtnCheck(id) {
