@@ -85,39 +85,28 @@ header {
     right: 0.8em;
 }
 
-.sidebar-opener::after {
-    content: '';
+.total-quantity {
     width: 20px;
     height: 20px;
     background-color: red;
+    font-family: var(--font-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.7rem;
     border-radius: 50%;
     position: absolute;
-    top: 0.1em;
-    right: 0;
+    top: -1em;
+    right: -1.2em;
     color: white;
     display: none;
 }
 
-.nav-btn .fa-bag-shopping::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7rem;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    right: 1em;
-    color: white;
-    display: none;
+/* cart icon */
+.fa-bag-shopping {
+    position: relative;
 }
+
 
 .sidebar-closer {
     top: 0.2em;
@@ -368,6 +357,7 @@ footer {
     margin: 0.3em;
     height: 15px;
 }
+
 
 .skeleton-brand {
     width: 30%;
@@ -1931,23 +1921,6 @@ footer {
         border: unset;
         font-size: 1rem;
         position: relative;
-    }
-
-    .nav-btn .fa-bag-shopping::after {
-        content: '';
-        width: 23px;
-        height: 23px;
-        background-color: red;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.7rem;
-        border-radius: 50%;
-        position: absolute;
-        top: 0.3em;
-        right: 0.1em;
-        color: white;
-        display: none;
     }
 
     .active-nav-btn {
