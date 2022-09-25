@@ -26,7 +26,10 @@
                 <li class="nav-item"><a href="FAQ.html" class="nav-link">FAQ</a></li>
             </div>
             <div class="sidebar-btns">
-                <a class="nav-btn" href="cart.html">My Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                <a class="nav-btn" href="cart.html">My Cart <i class="fa-solid fa-bag-shopping">
+                        <div class="total-quantity"></div>
+                    </i>
+                </a>
                 <a class="nav-btn  active-nav-btn" href="sign-in.html">My Account <i class="fa-solid fa-user"></i></a>
             </div>
         </ul>
@@ -101,7 +104,8 @@
 
     </footer>
 
-    <script src="js/essentials.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/essentials.js" type="module"></script>
 </body>
 
 </html>
