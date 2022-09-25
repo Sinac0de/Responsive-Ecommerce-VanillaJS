@@ -1,5 +1,6 @@
 
 import SProduct from "./SProduct.js";
+import CartLogic from "./CartLogic.js";
 export default class Product {
 
     //add event listener to the products
@@ -15,20 +16,13 @@ export default class Product {
         const classNames = [...e.target.classList];
         if (classNames.includes("add-to-cart-btn") || classNames.includes("fa-cart-shopping")) {
             const btnId = e.currentTarget.dataset.id;
-            Product.addToCart(btnId);
+            CartLogic.addProduct(btnId);//add this product to cart
+
         } else {//clicked on the product card 
             const productId = e.currentTarget.dataset.id;
             const root = document.querySelector("main");
-            new SProduct(productId, productsList, root);
+            new SProduct(productId, productsList, root);//create product details page
         }
-    }
-
-    //add product with specific id to the cart
-    static addToCart(id) {
-        const addToCartBtn = document.querySelector(`.add-to-cart-btn[data-id='${id}']`);
-        addToCartBtn.style.display = 'none';
-        const quantityDiv = addToCartBtn.nextElementSibling;
-        quantityDiv.style.display = "flex";
     }
 
     //create product's div
@@ -64,7 +58,5 @@ export default class Product {
             </div>`;
         return div;
     }
-
-
 
 }
