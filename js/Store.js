@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", setup);
 
 async function setup() {
     /*--create 10 template products--*/
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 12; i++) {
         storeProductsDiv.append(templateProduct.content.cloneNode(true));
     }
 
@@ -28,14 +28,15 @@ async function setup() {
     allproducts = await productApi;
 
     //render the products
-    renderProducts(allproducts);
+    if (allproducts) {//if there is any product 
+        renderProducts(allproducts);
+    }
 }
 
 
 /*=====================
  Search-Filter Scripts
 ======================*/
-
 
 /*------FILTER By TYPE-------*/
 typeButtons.forEach(btn => {
