@@ -1,9 +1,11 @@
+import CartLogic from "./CartLogic.js";
 import Product from "./Product.js";
 export default class SProduct {
     constructor(id, products, root) {
         this.createProductPage(id, products, root);//create product detail page
         this.featuredSection();//create featured products
         this.imgController();//changing images
+        CartLogic.productBtnsCheck();
         window.scroll({//scroll to the top
             top: 0
         });
@@ -42,11 +44,11 @@ export default class SProduct {
                             <h2 class="s-product-title">${title}</h2>
                             <h2 class="s-product-price gradient-bg">$${price}</h2>
                             <div class="s-product-add-to-cart">
-                                <button class="s-product-btn" data-id="${id}">Add To Cart</button>
+                                <button class="add-to-cart-btn s-product-btn" data-id="${id}">Add To Cart</button>
                                 <div class="s-product-quantity quantity-container">
-                                    <button class="cart-product-minus">-</button>
-                                    <span class="card-quantity">1</span>
-                                    <button class="cart-product-plus">+</button>
+                                    <button class="cart-product-minus" data-id="${id}">-</button>
+                                    <span class="card-quantity" data-id="${id}">1</span>
+                                    <button class="cart-product-plus" data-id="${id}">+</button>
                                 </div>
                             </div>
                             <h4>Product Details:</h4>
@@ -83,6 +85,17 @@ export default class SProduct {
                         </div>
                     </section>
                 </main>`;
+
+        //set event listener to buttons
+        const addToCartBtn = document.querySelector(".add-to-cart-btn");
+        const addQuantity = document.querySelector(".cart-product-plus");
+        const subQuantity = document.querySelector(".cart-product-minus");
+        const quantityDom = document.querySelector(".card-quantity");
+
+        addToCartBtn.addEventListener("click", () => CartLogic.addProduct(id));
+        addQuantity.addEventListener("click", () => CartLogic.quantityButtons(id, quantityDom, "add"));
+        subQuantity.addEventListener("click", () => CartLogic.quantityButtons(id, quantityDom, "subtract"));
+
 
         //remove active nav items and # links
         if (document.querySelector(".active-nav-item") && document.querySelectorAll("[href='#']")) {
