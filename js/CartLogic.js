@@ -1,4 +1,5 @@
 import Storage from "./Storage.js";
+import { cartIsEmpty } from "./cart.js";
 
 export default class CartLogic {
 
@@ -36,9 +37,33 @@ export default class CartLogic {
 
         //change style of card buttons
         const addToCartBtn = document.querySelector(`.add-to-cart-btn[data-id='${id}']`);
-        addToCartBtn.style.display = "flex";
-        const quantityConatiner = addToCartBtn.nextElementSibling;
-        quantityConatiner.style.display = "none";
+
+        //check if it's card product or cart product
+        if (addToCartBtn) {//card product 
+
+            addToCartBtn.style.display = "flex";
+            const quantityConatiner = addToCartBtn.nextElementSibling;
+            quantityConatiner.style.display = "none";
+
+        } else {//cart product
+
+            /*--remove cart product--*/
+            const product = document.querySelector(`.cart-product[data-id="${id}"]`);
+            product.remove();
+            /*--Check if cart is empty--*/
+            if (CartLogic.totalQuantity() < 1) {
+                cartIsEmpty();
+            } else {
+                const cartTotalPrice = document.getElementById("total-price-value");
+                cartTotalPrice.textContent = this.totalPrice();
+            }
+        }
+
+        const totalQuantities = document.querySelectorAll(".total-quantity");
+        totalQuantities.forEach(tQuantity => {
+            tQuantity.innerHTML = CartLogic.totalQuantity();
+        });
+
     }
 
     static quantityButtons(id, quantityDom, operation) {
@@ -71,16 +96,31 @@ export default class CartLogic {
             this.removeProduct(id);
         }
 
+        //update cart total Price
+        const cartTotalPrice = document.getElementById("total-price-value");
+        if (cartTotalPrice) {
+            cartTotalPrice.textContent = this.totalPrice();
+        }
+
+        const productTotalPrice = document.querySelector(`.cart-price[data-id="${id}"]`);
+        if (productTotalPrice) {
+            const cartProduct = cart.find(p => p.id == id);
+            const cartProductPrice = (cartProduct.quantity * cartProduct.price).toFixed(2);
+            productTotalPrice.textContent = `Total: $${cartProductPrice}`;
+        }
+
         //Update totalQuantity
         if (CartLogic.totalQuantity() < 1) {
+
             totalQuantities.forEach(tQuantity => {
                 tQuantity.style.display = "none";
-            })
-        } else {
+            });
+
+        } else {//total quantity >= 1
 
             totalQuantities.forEach(tQuantity => {
                 tQuantity.innerHTML = CartLogic.totalQuantity();
-            })
+            });
         }
 
     }
@@ -88,18 +128,29 @@ export default class CartLogic {
     //delete all cart products
     static clearCart() {
         const cart = [];
+        const allCartProducts = document.querySelectorAll(".cart-product");
+        const totalQuantities = document.querySelectorAll(".total-quantity");
+
         Storage.setCart(cart);
+        allCartProducts.forEach(cartProduct => {
+            cartProduct.remove();
+        });
+        cartIsEmpty();
+
+
+        totalQuantities.forEach(tQuantity => {
+            tQuantity.style.display = "none";
+        });
     }
 
     //calculate total cart price
     static totalPrice() {
         const cart = Storage.getCart();
-        const totalprice = cart.reduce((prev, curr) => {
-            const price = curr.price;
-            return prev + quantity;
+        const totalPrice = cart.reduce((prev, curr) => {
+            const price = curr.price * curr.quantity;
+            return prev + price;
         }, 0);
-        return totalPrice.toFixed(2);
-
+        return "$" + totalPrice.toFixed(2);
     }
 
     //calculate total cart quantity
