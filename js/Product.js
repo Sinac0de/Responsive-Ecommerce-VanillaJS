@@ -11,17 +11,31 @@ export default class Product {
         });
     }
 
-    //check if the clicked item is AddToBtn or product card 
+    //check if clicked item is addToCart , quantity or product card
     static checkClickedItem(e, productsList) {
         const classNames = [...e.target.classList];
+
         if (classNames.includes("add-to-cart-btn") || classNames.includes("fa-cart-shopping")) {
-            const btnId = e.currentTarget.dataset.id;
-            CartLogic.addProduct(btnId);//add this product to cart
+
+            const id = e.currentTarget.dataset.id;//product id
+            CartLogic.addProduct(id);//add this product to cart
+
+        } else if (classNames.includes("cart-product-minus")) {//subtract quantity
+
+            const quantityDom = e.target.nextElementSibling;//card quantity value
+            CartLogic.quantityButtons(e.target.dataset.id, quantityDom, "subtract");
+
+        } else if (classNames.includes("cart-product-plus")) {//add quantity
+
+            const quantityDom = e.target.previousElementSibling;//card quantity value
+            CartLogic.quantityButtons(e.target.dataset.id, quantityDom, "add");
 
         } else {//clicked on the product card 
+
             const productId = e.currentTarget.dataset.id;
             const root = document.querySelector("main");
             new SProduct(productId, productsList, root);//create product details page
+
         }
     }
 
@@ -50,9 +64,9 @@ export default class Product {
                     <h5 class="product-price gradient-bg">$${product.price}</h5>
                     <button class="add-to-cart-btn" data-id="${product.id}"><i class="fa-solid fa-cart-shopping"></i></button>
                     <div class="product-quantity quantity-container">
-                        <button id="cart-product-minus">-</button>
-                        <span id="quantity">1</span>
-                        <button id="cart-product-plus">+</button>
+                        <button class="cart-product-minus" data-id="${product.id}">-</button>
+                        <span class="card-quantity" data-id="${product.id}">1</span>
+                        <button class="cart-product-plus" data-id="${product.id}">+</button>
                     </div>
                 </div>
             </div>`;
