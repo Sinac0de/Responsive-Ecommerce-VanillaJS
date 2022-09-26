@@ -44,39 +44,37 @@
     <main id="cart">
         <div id="cart-products">
             <h2>Your Cart:</h2>
-            <div class="cart-products">
-                <div class="cart-product">
-                    <div class="cart-img-container">
-                        <img src="images/products/shirt/OXAtrres P01200/1.jpg">
-                    </div>
-                    <div class="cart-product-desc">
-                        <div class="cart-product-header">
-                            <h2>Pokemon Toy that has a glove</h2>
-                        </div>
-                        <div class="quantity-price">
-                            <div class="quantity-container">
-                                <button class="cart-product-minus">-</button>
-                                <span class="card-quantity">1</span>
-                                <button class="cart-product-plus">+</button>
-                            </div>
-                            <h4 class="price">$19.99</h4>
-                        </div>
-                    </div>
-                    <button class="cart-delete-product">&times;</button>
-                </div>
-            </div>
+            <div class="cart-products"></div>
         </div>
 
         <div id="cart-checkout">
             <div id="cart-total-price">
                 <h2>Total:</h2>
-                <h2>$334.98</h2>
+                <h2 id="total-price-value"></h2>
             </div>
-            <button id="cart-checkout-btn">Checkout</button>
+            <button id="cart-checkout-btn">Checkout
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="18px"
+                    width="18px" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M170.718 216.482L141.6 245.6l93.6 93.6 208-208-29.118-29.118L235.2 279.918l-64.482-63.436zM422.4 256c0 91.518-74.883 166.4-166.4 166.4S89.6 347.518 89.6 256 164.482 89.6 256 89.6c15.6 0 31.2 2.082 45.764 6.241L334 63.6C310.082 53.2 284.082 48 256 48 141.6 48 48 141.6 48 256s93.6 208 208 208 208-93.6 208-208h-41.6z">
+                    </path>
+                </svg>
+            </button>
             <p>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy"
                     class="google-recaptcha-link">Privacy
                     Policy</a> and <a href="https://policies.google.com/terms" class="google-recaptcha-link">Terms of
                     Service</a> apply.</p>
+            <button id="cart-clear-btn">Clear Cart
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 16 16"
+                    height="15px" width="15px" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z">
+                    </path>
+                    <path
+                        d="M10.5 4l-2.5 2.5-2.5-2.5-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-2.5-2.5 2.5-2.5z">
+                    </path>
+                </svg>
+            </button>
         </div>
     </main>
 
@@ -135,6 +133,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/essentials.js" type="module"></script>
+    <script src="js/cart.js" type="module"></script>
 </body>
 
 </html>
