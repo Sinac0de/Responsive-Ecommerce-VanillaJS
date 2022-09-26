@@ -1319,6 +1319,19 @@ footer {
     min-height: 80vh;
 }
 
+
+.cart-is-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#cart-is-empty-icon {
+    font-size: 4rem;
+}
+
 /* cart products */
 
 #cart h2 {
@@ -1346,7 +1359,7 @@ footer {
 }
 
 .cart-img-container {
-    width: 50%;
+    width: 30%;
     display: flex;
     overflow: hidden;
     border-radius: 15px;
@@ -1360,9 +1373,14 @@ footer {
 }
 
 .cart-product-desc {
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.cart-product-desc h2 {
+    font-size: var(--font-size-regular);
 }
 
 .card-quantity {
@@ -1372,13 +1390,15 @@ footer {
     padding: 0 1em;
 }
 
-.price {
-    font-size: var(--font-h-small);
+.cart-product-price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
 }
 
 
-.cart-product-header {
-    font-size: var(--font-p-small);
+.cart-product-header h2 {
+    font-size: var(--font-h-small);
 }
 
 .cart-product-quantity {
@@ -1427,6 +1447,15 @@ footer {
     border-radius: 0 15px 15px 0;
 }
 
+.cart-price,
+.cart-each-price {
+    font-size: var(--font-p-small);
+}
+
+.cart-each-price {
+    opacity: 0.5;
+}
+
 .cart-delete-product {
     position: absolute;
     top: 0.3em;
@@ -1453,22 +1482,39 @@ footer {
     align-items: center;
 }
 
-#cart-checkout-btn {
+#cart-checkout-btn,
+#cart-clear-btn {
     width: 100%;
     border: none;
     border-radius: 15px;
     outline: none;
-    background-color: rgb(0, 117, 196);
     padding: 1em;
     color: white;
     font-weight: bold;
     font-size: var(--font-h-small);
-    margin: 1em 0;
-    transition: all 0.3s;
+    margin: 0.5em 0;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+}
+
+#cart-checkout-btn {
+    background-color: rgb(0, 117, 196);
+}
+
+#cart-clear-btn {
+    margin-top: 1em;
+    background-color: red;
 }
 
 #cart-checkout-btn:hover {
     background-color: rgb(0, 97, 162);
+}
+
+#cart-clear-btn:hover {
+    background-color: rgb(185, 0, 0);
 }
 
 #cart-checkout p {
@@ -2643,7 +2689,6 @@ footer {
     }
 
     .cart-products::-webkit-scrollbar {
-        background-color: #F3F3F3;
         border-radius: 15px;
     }
 
@@ -2675,6 +2720,11 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .cart-price,
+    .cart-each-price {
+        font-size: var(--font-p-tablet);
     }
 
     .cart-delete-product {
