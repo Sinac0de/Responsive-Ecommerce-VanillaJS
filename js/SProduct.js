@@ -1,9 +1,9 @@
 import Product from "./Product.js";
 export default class SProduct {
     constructor(id, products, root) {
-        this.createProductPage(id, products, root);
+        this.createProductPage(id, products, root);//create product detail page
         this.featuredSection();//create featured products
-        this.imgController();
+        this.imgController();//changing images
         window.scroll({//scroll to the top
             top: 0
         });
@@ -44,9 +44,9 @@ export default class SProduct {
                             <div class="s-product-add-to-cart">
                                 <button class="s-product-btn" data-id="${id}">Add To Cart</button>
                                 <div class="s-product-quantity quantity-container">
-                                    <button id="cart-product-minus">-</button>
-                                    <span id="quantity">1</span>
-                                    <button id="cart-product-plus">+</button>
+                                    <button class="cart-product-minus">-</button>
+                                    <span class="card-quantity">1</span>
+                                    <button class="cart-product-plus">+</button>
                                 </div>
                             </div>
                             <h4>Product Details:</h4>
@@ -90,21 +90,7 @@ export default class SProduct {
             document.querySelectorAll("[href='#']").forEach(link => link.setAttribute("href", window.location.pathname));
         }
 
-        /*-----GoBackBtn----*/
-        if (!document.querySelector(".go-back-btn")) {//if there isn't any back button
-            const goBackBtn = document.createElement("a");
-            goBackBtn.setAttribute("href", window.location.pathname);
-            goBackBtn.classList.add("go-back-btn");
-            goBackBtn.innerHTML = `<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21 11L6.414 11 11.707 5.707 10.293 4.293 2.586 12 10.293 19.707 11.707 18.293 6.414 13 21 13z"></path></svg>`;
-            document.querySelector("header").prepend(goBackBtn);
-
-            goBackBtn.style.padding = "0.4em";
-            goBackBtn.style.fontSize = "1.2rem";
-            goBackBtn.style.marginLeft = "0.3em";
-        }
-
-
-        //set the history to store or home page
+        //set the history to "store" or "home" page
         window.history.pushState(null, null, `${window.location.href}`);
         window.addEventListener('popstate', () => {
             window.location.assign(window.location.href);
