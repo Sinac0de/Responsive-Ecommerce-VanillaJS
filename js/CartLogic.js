@@ -18,20 +18,32 @@ export default class CartLogic {
         Storage.setCart(cart);
 
         //render total quantity
-        const totalQuantity = document.querySelector(".total-quantity");
-        totalQuantity.style.display = "flex";
-        totalQuantity.textContent = CartLogic.totalQuantity();
+        const totalQuantities = document.querySelectorAll(".total-quantity");
+        totalQuantities.forEach(tQuantity => {
+            tQuantity.style.display = "flex";
+            tQuantity.textContent = CartLogic.totalQuantity();
+        })
+
     }
 
+    //remove a cart product with id
     static removeProduct(id) {
-        const cart = Storage.getCart();
+        let cart = Storage.getCart();
+        //remove item from cart
+        cart = cart.filter(p => parseInt(p.id) !== parseInt(id));
+        //update storage
+        Storage.setCart(cart);
 
-
+        //change style of card buttons
+        const addToCartBtn = document.querySelector(`.add-to-cart-btn[data-id='${id}']`);
+        addToCartBtn.style.display = "flex";
+        const quantityConatiner = addToCartBtn.nextElementSibling;
+        quantityConatiner.style.display = "none";
     }
 
     static quantityButtons(id, quantityDom, operation) {
         let cart = Storage.getCart();
-        const totalQuantity = document.querySelector(".total-quantity");
+        const totalQuantities = document.querySelectorAll(".total-quantity");
         let quantityValue = quantityDom.textContent;
 
         //operation on the quantity
@@ -40,15 +52,8 @@ export default class CartLogic {
         } else if (operation == "subtract") {
             quantityValue--;
         }
-        quantityDom.textContent = quantityValue;//set new quantity value
-
-        //hide card quantity if quantity is less than 1
-        if (quantityValue < 1) {
-            quantityDom.textContent = 1;
-            const addToCartBtn = document.querySelector(`.add-to-cart-btn[data-id='${id}']`);
-            addToCartBtn.style.display = "flex";
-            const quantityConatiner = addToCartBtn.nextElementSibling;
-            quantityConatiner.style.display = "none";
+        if (quantityValue > 0) {
+            quantityDom.textContent = quantityValue;//set new quantity value
         }
 
         //change cart quantity value
@@ -61,17 +66,29 @@ export default class CartLogic {
         //save to storage
         Storage.setCart(cart);
 
+        //remove product if quantity is less than 1 
+        if (quantityValue < 1) {
+            this.removeProduct(id);
+        }
+
         //Update totalQuantity
         if (CartLogic.totalQuantity() < 1) {
-            totalQuantity.style.display = "none";
+            totalQuantities.forEach(tQuantity => {
+                tQuantity.style.display = "none";
+            })
         } else {
-            totalQuantity.innerHTML = CartLogic.totalQuantity();
+
+            totalQuantities.forEach(tQuantity => {
+                tQuantity.innerHTML = CartLogic.totalQuantity();
+            })
         }
 
     }
 
-    static clearCart(cart) {
-
+    //delete all cart products
+    static clearCart() {
+        const cart = [];
+        Storage.setCart(cart);
     }
 
     //calculate total cart price
