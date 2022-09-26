@@ -1352,14 +1352,14 @@ footer {
     justify-content: space-between;
 }
 
-#quantity-price {
+.card-quantity {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1em;
 }
 
-#price {
+.price {
     font-size: var(--font-h-small);
 }
 
@@ -1377,9 +1377,9 @@ footer {
     display: flex;
 }
 
-#cart-product-minus,
-#cart-product-plus,
-#quantity {
+.cart-product-minus,
+.cart-product-plus,
+.card-quantity {
     border: none;
     outline: none;
     background-color: black;
@@ -1392,18 +1392,19 @@ footer {
     padding: 0.8em;
 }
 
-#quantity {
+.card-quantity {
     background-color: white;
     color: black;
     border: 1px solid black;
 }
 
-#cart-product-minus {
+
+.cart-product-minus {
     border-radius: 15px 0 0 15px;
     border-right: 1px solid gray;
 }
 
-#cart-product-plus {
+.cart-product-plus {
     border-radius: 0 15px 15px 0;
     border-left: 1px solid gray;
 }
