@@ -5,7 +5,7 @@ const sidebar = document.querySelector(".nav-items");
 const sidebarOpener = document.querySelector(".sidebar-opener");
 const sidebarCloser = document.querySelector(".sidebar-closer");
 const sidebarBackdrop = document.querySelector(".sidebar-backdrop");
-const totalQuantity = document.querySelector(".total-quantity");
+const totalQuantities = document.querySelectorAll(".total-quantity");
 const body = document.body;
 
 /*==============
@@ -15,6 +15,7 @@ const body = document.body;
 /** EVENT LISTENERS **/
 sidebarOpener.addEventListener("click", openSidebar);
 
+//close sidebar
 [sidebarCloser, sidebarBackdrop].forEach(element => {
     element.addEventListener("click", closeSidebar);
 });
@@ -49,9 +50,13 @@ async function setup() {
     //save products on localstorage
     Storage.setProducts(allproducts);
 
-    //render total quantity
+    //render cart quantity & change addToCart
     if (CartLogic.totalQuantity() > 0) {
-        totalQuantity.style.display = "flex";
-        totalQuantity.textContent = CartLogic.totalQuantity();
+        totalQuantities.forEach(tQuantity => {
+            tQuantity.style.display = "flex";
+            tQuantity.textContent = CartLogic.totalQuantity();
+        });
     }
+
+
 }
