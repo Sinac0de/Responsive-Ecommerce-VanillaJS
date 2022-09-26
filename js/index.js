@@ -1,7 +1,8 @@
+import Product from "./Product.js";
+import CartLogic from "./CartLogic.js";
 /*=============================
       products loading
 =============================*/
-import Product from "./Product.js";
 
 /*--------Variables------*/
 const featuredProductsDiv = document.querySelector(".featured-products .slider-products");
@@ -82,6 +83,10 @@ function setup() {
 
         //add event listener to products card
         Product.setEventListener(allproducts);
+
+        if (CartLogic.totalQuantity() > 0) {
+            CartLogic.productBtnsCheck();
+        }
 
     }).catch(err => console.log(err));
 }

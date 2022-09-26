@@ -1,4 +1,6 @@
+import CartLogic from "./CartLogic.js";
 import Product from "./Product.js";
+
 const typeButtons = document.querySelectorAll(".type-btn");
 const storeProductsDiv = document.getElementById("products-container");
 const templateProduct = document.querySelector(".template-product");
@@ -163,4 +165,8 @@ function renderProducts(products) {
     });
     //add event listener to products card
     Product.setEventListener(allproducts);
+    //change product btns if it's in cart
+    if (CartLogic.totalQuantity() > 0) {
+        CartLogic.productBtnsCheck();
+    }
 }
