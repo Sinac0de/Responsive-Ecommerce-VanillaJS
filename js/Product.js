@@ -43,6 +43,7 @@ export default class Product {
     static createProduct(product, isSlide) {
         const div = document.createElement("div");
 
+        //check if it's a slide product or not
         if (isSlide) {
             div.classList.add("product", "swiper-slide");
         } else {

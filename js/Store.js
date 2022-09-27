@@ -35,7 +35,6 @@ async function setup() {
     }
 }
 
-
 /*=====================
  Search-Filter Scripts
 ======================*/
