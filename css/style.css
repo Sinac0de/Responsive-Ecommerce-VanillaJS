@@ -73,7 +73,6 @@ header {
 .sidebar-opener,
 .sidebar-closer {
     font-size: 1.2rem;
-    position: absolute;
     border: none;
     outline: none;
     cursor: pointer;
@@ -82,6 +81,7 @@ header {
 }
 
 .sidebar-opener {
+    position: absolute;
     right: 0.8em;
 }
 
@@ -113,9 +113,11 @@ header {
 
 
 .sidebar-closer {
-    top: 0.2em;
     font-size: 2.2rem;
-    left: 0.5em;
+    width: fit-content;
+    position: fixed;
+    top:0;
+    left: 0;
 }
 
 .sidebar-backdrop {
@@ -132,24 +134,29 @@ header {
 .nav-items {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     right: 0;
     top: 0;
     bottom: 0;
     list-style-type: none;
-    padding: 4.5em 1.5em;
     background-color: #F3F3F3;
     width: 60%;
     transform: translateX(100%);
     transition: all 0.5s;
     z-index: 999;
     font-size: 1.3rem;
+    overflow: hidden;
 }
 
 #nav-links {
     display: flex;
     flex-direction: column;
+    align-items: left;
     gap: 1.3em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 4.5em;
 }
 
 .nav-logo {
@@ -162,7 +169,8 @@ header {
 .nav-item {
     position: relative;
     font-size: var(--font-h-small);
-    width: 100%;
+    width: 90%;
+    left: 1.3em;
 }
 
 .nav-link {
@@ -170,11 +178,10 @@ header {
 }
 
 .sidebar-btns {
-    position: absolute;
     width: 100%;
     gap: 1em;
-    bottom: 1em;
-    left: 0;
+    margin-bottom: 1em;
+    padding: 0 0.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,7 +189,7 @@ header {
 
 
 .nav-btn {
-    width: 90%;
+    width: 100%;
     border: 2px solid black;
     border-radius: var(--border-radius);
     padding: 1em;
@@ -687,15 +694,13 @@ footer {
     color: white;
 }
 
-
-
 /*-----------------------------
     Home banners styles
  ------------------------------*/
 
 .banner {
     margin: 1em 0;
-    height: 40vh;
+    height: 250px;
     background-image: url('/images/banners/1.jpg');
     background-position: center;
     background-attachment: fixed;
@@ -1654,11 +1659,17 @@ footer {
     /*----------------
  Home Hero Styles 
  -----------------*/
-
-    #hero {
-        flex-direction: row;
-        max-height: 500px;
+ 
+ #hero {
+     flex-direction: row;
+     max-height: 500px;
     }
+    
+    #hero p{
+        margin: 0;
+        padding-right: 1em;
+    }
+
 
     .hero-img-container {
         width: fit-content;
@@ -1679,12 +1690,15 @@ footer {
     }
 
     .hero-info {
-        position: absolute;
-        width: 60%;
-        right: 1em;
-        top: 14em;
-        padding: 1em 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5em;
+        width: 100%;
+        margin-right: 1em;
+        text-align: left;
     }
+
 
 
     /*-----------------------------
@@ -1945,6 +1959,9 @@ footer {
 
     #nav-links {
         flex-direction: row;
+        overflow-y: unset;
+        overflow-x: unset;
+        margin-top: unset;
     }
 
     .nav-logo {
@@ -1953,6 +1970,7 @@ footer {
 
     .nav-item {
         width: unset;
+        left: unset;
     }
 
 
@@ -1962,6 +1980,8 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-bottom: unset;
+        padding: unset;
     }
 
 
