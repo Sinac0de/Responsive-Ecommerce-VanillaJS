@@ -5,13 +5,12 @@ const productsContainer = document.querySelector(".cart-products");
 const cartContent = document.getElementById("cart");
 const totalPrice = document.getElementById("total-price-value");
 const clearCartBtn = document.getElementById("cart-clear-btn");
+const cartCheckoutBtn = document.getElementById("cart-checkout-btn");
 let cart = Storage.getCart() || [];
-
 
 document.addEventListener("DOMContentLoaded", setup);
 
 function setup() {
-
     /*--render cart products--*/
     if (cart.length > 0) {//cart isn't empty
         let productsDiv = "";
@@ -44,33 +43,43 @@ function setup() {
             <button class="cart-delete-product" data-id="${id}">&times;</button>
         </div>`;
         });
-
+        
+        productsContainer.innerHTML = productsDiv;
+         
+        //update total price
         totalPrice.textContent = CartLogic.totalPrice();
 
-        productsContainer.innerHTML = productsDiv;
-
+        /*get product buttons*/
         const allPlusQuantity = document.querySelectorAll(".cart-product-plus");
         const allMinusQuantity = document.querySelectorAll(".cart-product-minus");
         const allCartDeleteBtns = document.querySelectorAll(".cart-delete-product");
 
+        //product add (plus) button
         allPlusQuantity.forEach(btn => {
             const quantityDom = btn.previousElementSibling;
             const id = btn.dataset.id;
             btn.addEventListener("click", () => CartLogic.quantityButtons(id, quantityDom, "add"));
         });
 
+        //product subtract button
         allMinusQuantity.forEach(btn => {
             const quantityDom = btn.nextElementSibling;
             const id = btn.dataset.id;
             btn.addEventListener("click", () => CartLogic.quantityButtons(id, quantityDom, "subtract"));
         });
 
+        //product delete button
         allCartDeleteBtns.forEach(btn => {
             btn.addEventListener("click", (e) => CartLogic.removeProduct(e.target.dataset.id));
         })
 
+        //clear cart button
         clearCartBtn.addEventListener("click", () => CartLogic.clearCart());
 
+        //cart checkout button
+        cartCheckoutBtn.addEventListener("click", () => CartLogic.checkout());
+
+        //remove empty class from main content
         cartContent.classList.remove("cartIsEmpty");
 
 
