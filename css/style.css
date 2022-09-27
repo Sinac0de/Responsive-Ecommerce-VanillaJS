@@ -1531,6 +1531,12 @@ footer {
     color: rgb(0, 117, 196);
 }
 
+#purchase-msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*=====================================
     Sign Up/ Sign in / reset pass page
 =====================================*/
