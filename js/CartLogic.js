@@ -1,5 +1,4 @@
 import Storage from "./Storage.js";
-
 export default class CartLogic {
 
     //add single product to the cart
@@ -23,7 +22,6 @@ export default class CartLogic {
             tQuantity.style.display = "flex";
             tQuantity.textContent = CartLogic.totalQuantity();
         })
-
     }
 
     //remove a cart product with id
@@ -58,6 +56,7 @@ export default class CartLogic {
             }
         }
 
+        //update total quantity divs
         const totalQuantities = document.querySelectorAll(".total-quantity");
         totalQuantities.forEach(tQuantity => {
             tQuantity.innerHTML = CartLogic.totalQuantity();
@@ -101,6 +100,7 @@ export default class CartLogic {
             cartTotalPrice.textContent = this.totalPrice();
         }
 
+        //update product total price
         const productTotalPrice = document.querySelector(`.cart-price[data-id="${id}"]`);
         if (productTotalPrice) {
             const cartProduct = cart.find(p => p.id == id);
@@ -110,13 +110,11 @@ export default class CartLogic {
 
         //Update totalQuantity
         if (CartLogic.totalQuantity() < 1) {
-
             totalQuantities.forEach(tQuantity => {
                 tQuantity.style.display = "none";
             });
 
         } else {//total quantity >= 1
-
             totalQuantities.forEach(tQuantity => {
                 tQuantity.innerHTML = CartLogic.totalQuantity();
             });
@@ -130,16 +128,37 @@ export default class CartLogic {
         const allCartProducts = document.querySelectorAll(".cart-product");
         const totalQuantities = document.querySelectorAll(".total-quantity");
 
+        //update storage
         Storage.setCart(cart);
+
+        //delete each product
         allCartProducts.forEach(cartProduct => {
             cartProduct.remove();
         });
+
+        //render cart is empty content
         this.cartIsEmpty();
-
-
+        
+        //hide total quantity
         totalQuantities.forEach(tQuantity => {
             tQuantity.style.display = "none";
         });
+    }
+
+    //checkout cart products
+    static checkout(){
+        //clear cart
+        this.clearCart();
+        const cartContent = document.getElementById("cart");
+        cartContent.innerHTML = "";
+        //create fake checkout messages
+        const purchaseMsgDiv = document.createElement("div");
+        purchaseMsgDiv.setAttribute("id","purchase-msg");
+        purchaseMsgDiv.innerHTML = `<h2>processing purchase...</h2>`;
+        cartContent.append(purchaseMsgDiv);
+        setTimeout(() => {
+            purchaseMsgDiv.innerHTML = "<h2>Thank you for your purchase. See you soon ✌</h2>";
+        },1500);
     }
 
     //if cart is empty
