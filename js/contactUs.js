@@ -6,12 +6,12 @@ const sendMsgButton = document.getElementById("sendMsgBtn");
 
 sendMsgButton.addEventListener("click", sendMessage);
 
-function sendMessage(){
+function sendMessage() {
     //change border color if an input is empty
-    [firstName , lastName, email, message].forEach(input=>{
-        if(input.value == ""){
+    [firstName, lastName, email, message].forEach(input => {
+        if (input.value == "") {
             input.style.border = "2px solid red";
-        }else{
+        } else {
             input.style.border = "1px solid gray";
         }
     });
