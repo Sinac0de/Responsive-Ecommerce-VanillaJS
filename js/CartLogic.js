@@ -202,27 +202,29 @@ export default class CartLogic {
     //change product card btns if the product is in cart
     static productBtnsCheck() {
         const cart = Storage.getCart();
-        const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
-        addToCartBtns.forEach(addToCartBtn => {
-            const id = addToCartBtn.dataset.id;//product id
-            if (cart.find(product => product.id == id)) {
-                //hide addToCartBtn
-                addToCartBtn.style.display = "none";
+        if (cart) {
+            const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+            addToCartBtns.forEach(addToCartBtn => {
+                const id = addToCartBtn.dataset.id;//product id
+                if (cart.find(product => product.id == id)) {
+                    //hide addToCartBtn
+                    addToCartBtn.style.display = "none";
 
-                //show and style card quantity
-                const quantityDiv = addToCartBtn.nextElementSibling;
-                quantityDiv.style.display = "flex";
-                const quantityValue = document.querySelector(`.card-quantity[data-id='${id}']`);
-                quantityValue.textContent = cart.find(p => p.id == id).quantity;
+                    //show and style card quantity
+                    const quantityDiv = addToCartBtn.nextElementSibling;
+                    quantityDiv.style.display = "flex";
+                    const quantityValue = document.querySelector(`.card-quantity[data-id='${id}']`);
+                    quantityValue.textContent = cart.find(p => p.id == id).quantity;
 
-                /*hide card quantity*/
-                if (quantityValue.textContent < 1) {
-                    quantityValue.textContent = 1;
-                    quantityDiv.style.display = "none";
-                    addToCartBtn.style.display = "flex";
+                    /*hide card quantity*/
+                    if (quantityValue.textContent < 1) {
+                        quantityValue.textContent = 1;
+                        quantityDiv.style.display = "none";
+                        addToCartBtn.style.display = "flex";
+                    }
                 }
-            }
-        });
+            });
+        }
 
     }
 
