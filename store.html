@@ -1,160 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>WearMe | Your dream clothes</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h1 class="nav-logo"><a href="index.html">WearMe</a></h1>
-        <ul class="nav-items">
-            <div id="nav-links">
-                <button class="sidebar-closer">&times;</button>
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item active-nav-item"><a href="#" class="nav-link">Store</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact Us</a></li>
-                <li class="nav-item"><a href="FAQ.html" class="nav-link">FAQ</a></li>
-            </div>
-            <div class="sidebar-btns">
-                <a class="nav-btn" href="cart.html">My Cart <i class="fa-solid fa-bag-shopping">
-                        <div class="total-quantity"></div>
-                    </i>
-                </a>
-                <a class="nav-btn" href="sign-in.html">My Account <i class="fa-solid fa-user"></i></a>
-        </ul>
-        <button class="sidebar-opener">
-            <i class="fa-solid fa-bars">
-                <div class="total-quantity total-quantity-sidebar"></div>
+      <h1 class="nav-logo"><a href="index.html">WearMe</a></h1>
+      <ul class="nav-items">
+        <div id="nav-links">
+          <button class="sidebar-closer">&times;</button>
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item active-nav-item">
+            <a href="#" class="nav-link">Store</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact-us.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item"><a href="FAQ.html" class="nav-link">FAQ</a></li>
+        </div>
+        <div class="sidebar-btns">
+          <a class="nav-btn" href="cart.html"
+            >My Cart
+            <i class="fa-solid fa-bag-shopping">
+              <div class="total-quantity"></div>
             </i>
-        </button>
-        <div class="sidebar-backdrop"></div>
+          </a>
+          <a class="nav-btn" href="sign-in.html"
+            >My Account <i class="fa-solid fa-user"></i
+          ></a>
+        </div>
+      </ul>
+      <button class="sidebar-opener">
+        <i class="fa-solid fa-bars">
+          <div class="total-quantity total-quantity-sidebar"></div>
+        </i>
+      </button>
+      <div class="sidebar-backdrop"></div>
     </header>
 
     <main id="store">
-        <section id="store-header">
-            <div class="search-filter">
-                <div class="search-container">
-                    <svg class="search-icon" stroke="currentColor" fill="currentColor" stroke-width="0"
-                        viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path
-                                d="M11 2c4.968 0 9 4.032 9 9s-4.032 9-9 9-9-4.032-9-9 4.032-9 9-9zm0 16c3.867 0 7-3.133 7-7 0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7zm8.485.071l2.829 2.828-1.415 1.415-2.828-2.829 1.414-1.414z">
-                            </path>
-                        </g>
-                    </svg>
-                    <input type="text" name="search-bar" id="search-bar" placeholder="search for products">
+      <section id="store-header">
+        <div class="search-filter">
+          <div class="search-container">
+            <svg
+              class="search-icon"
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M11 2c4.968 0 9 4.032 9 9s-4.032 9-9 9-9-4.032-9-9 4.032-9 9-9zm0 16c3.867 0 7-3.133 7-7 0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7zm8.485.071l2.829 2.828-1.415 1.415-2.828-2.829 1.414-1.414z"
+                ></path>
+              </g>
+            </svg>
+            <input
+              type="text"
+              name="search-bar"
+              id="search-bar"
+              placeholder="search for products"
+            />
+          </div>
+          <select name="filter-products" id="filter-products">
+            <option value="Newest">Newest</option>
+            <option value="Oldest">Oldest</option>
+            <option value="Price">Price</option>
+            <option value="Popularity">Popularity</option>
+          </select>
+        </div>
+      </section>
+
+      <section id="store-main">
+        <div class="types-container">
+          <a class="type-btn active-type" href="#" data-type="all">All</a>
+          <a class="type-btn" href="#" data-type="shoes">Shoes</a>
+          <a class="type-btn" href="#" data-type="socks">Socks</a>
+          <a class="type-btn" href="#" data-type="watch">Watch</a>
+          <a class="type-btn" href="#" data-type="shirt">Shirt</a>
+          <a class="type-btn" href="#" data-type="glasses">Glasses</a>
+        </div>
+
+        <section id="store-products">
+          <div id="products-container">
+            <template class="template-product">
+              <div class="product product-skeleton">
+                <div class="product-img skeleton" loading="lazy"></div>
+                <div class="product-description">
+                  <div class="product-brand-stars">
+                    <div class="skeleton skeleton-brand"></div>
+                    <div class="skeleton skeleton-rating"></div>
+                  </div>
+                  <div class="skeleton skeleton-title"></div>
+                  <div class="skeleton skeleton-title"></div>
+                  <h5 class="skeleton skeleton-price"></h5>
                 </div>
-                <select name="filter-products" id="filter-products">
-                    <option value="Newest">Newest</option>
-                    <option value="Oldest">Oldest</option>
-                    <option value="Price">Price</option>
-                    <option value="Popularity">Popularity</option>
-                </select>
-            </div>
+              </div>
+            </template>
+          </div>
         </section>
-
-        <section id="store-main">
-            <div class="types-container">
-                <a class="type-btn active-type" href="#" data-type="all">All</a>
-                <a class="type-btn" href="#" data-type="shoes">Shoes</a>
-                <a class="type-btn" href="#" data-type="socks">Socks</a>
-                <a class="type-btn" href="#" data-type="watch">Watch</a>
-                <a class="type-btn" href="#" data-type="shirt">Shirt</a>
-                <a class="type-btn" href="#" data-type="glasses">Glasses</a>
-            </div>
-
-            <section id="store-products">
-                <div id="products-container">
-                    <template class="template-product">
-                        <div class="product product-skeleton">
-                            <div class="product-img skeleton" loading="lazy"></div>
-                            <div class="product-description">
-                                <div class="product-brand-stars">
-                                    <div class="skeleton skeleton-brand"></div>
-                                    <div class="skeleton skeleton-rating"></div>
-                                </div>
-                                <div class="skeleton skeleton-title"></div>
-                                <div class="skeleton skeleton-title"></div>
-                                <h5 class="skeleton skeleton-price"></h5>
-                            </div>
-                        </div>
-                    </template>
-                </div>
-
-            </section>
-        </section>
-
+      </section>
     </main>
 
     <footer>
-        <div class="footer-row">
-            <div class="footer-col">
-                <h1 class="footer-logo">WearMe</h1>
-                <h3>Contact</h3>
-                <p><strong>Address: </strong>Kermanshah,Iran</p>
-                <p><strong>Email: </strong>support@wearme.com</p>
-                <p><strong>Hours: </strong>10:00 - 18:00.Mon - Sat</p>
-                <h3>Follow Us</h3>
-                <div class="footer-socials">
-                    <a href="https://www.facebook.com/" id="facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://twitter.com/" id="twitter"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/" id="instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.pinterest.com/" id="pinterest"><i class="fa-brands fa-pinterest"></i></a>
-                    <a href="https://youtube.com/" id="youtube"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h3>About</h3>
-                <a href="about.html">About Us</a>
-                <a href="FAQ.html">Delivery Information</a>
-                <a href="FAQ.html">Privacy Policy</a>
-                <a href="FAQ.html">Terms & Conditions</a>
-                <a href="contact-us.html">Contact Us</a>
-            </div>
-
-            <div class="footer-col">
-                <h3>My Account</h3>
-                <a href="sign-in.html">Sign In</a>
-                <a href="cart.html">View Cart</a>
-                <a href="cart.html">Track My Order</a>
-                <a href="FAQ.html">Help</a>
-            </div>
-
-            <div id="install-app" class="footer-col">
-                <h3>Install App</h3>
-                <p>From App Store or Google Play Store</p>
-                <a href="https://www.apple.com/app-store" class="btn"><i class="fa-brands fa-app-store"></i> app
-                    store</a>
-                <a href="https://play.google.com/" class="btn"><i class="fa-brands fa-google-play"></i> Google
-                    Play</a>
-            </div>
-
+      <div class="footer-row">
+        <div class="footer-col">
+          <h1 class="footer-logo">WearMe</h1>
+          <h3>Contact</h3>
+          <p><strong>Address: </strong>Kermanshah,Iran</p>
+          <p><strong>Email: </strong>support@wearme.com</p>
+          <p><strong>Hours: </strong>10:00 - 18:00.Mon - Sat</p>
+          <h3>Follow Us</h3>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/" id="facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://twitter.com/" id="twitter"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/" id="instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.pinterest.com/" id="pinterest"
+              ><i class="fa-brands fa-pinterest"></i
+            ></a>
+            <a href="https://youtube.com/" id="youtube"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
         </div>
 
-        <div class="credit">
-            <p>&copy;2022 WearMe</p>
-            <p>Made with ♥ by <a href="https://github.com/Sinac0de">Sina Moradian</a></p>
+        <div class="footer-col">
+          <h3>About</h3>
+          <a href="about.html">About Us</a>
+          <a href="FAQ.html">Delivery Information</a>
+          <a href="FAQ.html">Privacy Policy</a>
+          <a href="FAQ.html">Terms & Conditions</a>
+          <a href="contact-us.html">Contact Us</a>
         </div>
 
+        <div class="footer-col">
+          <h3>My Account</h3>
+          <a href="sign-in.html">Sign In</a>
+          <a href="cart.html">View Cart</a>
+          <a href="cart.html">Track My Order</a>
+          <a href="FAQ.html">Help</a>
+        </div>
+
+        <div id="install-app" class="footer-col">
+          <h3>Install App</h3>
+          <p>From App Store or Google Play Store</p>
+          <a href="https://www.apple.com/app-store" class="btn"
+            ><i class="fa-brands fa-app-store"></i> app store</a
+          >
+          <a href="https://play.google.com/" class="btn"
+            ><i class="fa-brands fa-google-play"></i> Google Play</a
+          >
+        </div>
+      </div>
+
+      <div class="credit">
+        <p>&copy;2022 WearMe</p>
+        <p>
+          Made with ♥ by <a href="https://github.com/Sinac0de">Sina Moradian</a>
+        </p>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/essentials.js" type="module"></script>
     <script src="js/store.js" type="module"></script>
     <script src="js/swiper-bundle.min.js"></script>
-</body>
-
+  </body>
 </html>
