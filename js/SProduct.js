@@ -158,9 +158,9 @@ export default class SProduct {
         };
 
         /*--get and replace products in the Featured Products section--*/
-        axios.get("https://api.npoint.io/ca6b5ba76fcbfafeffac").then(res => {
-            const allproducts = res.data.items;
-            const featuredProducts = res.data.featured;//featured products
+        fetch("https://api.npoint.io/ca6b5ba76fcbfafeffac").then(res => res.json()).then(data => {
+            const allproducts = data.items;
+            const featuredProducts = data.featured;//featured products
 
             featuredProductsDiv.innerHTML = "";
 

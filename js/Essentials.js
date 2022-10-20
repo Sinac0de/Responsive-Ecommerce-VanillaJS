@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", setup)
 
 async function setup() {
     const productApi =
-        axios.get("https://api.npoint.io/ca6b5ba76fcbfafeffac").then(res => {
-            return res.data.items;//all products
+        fetch("https://api.npoint.io/ca6b5ba76fcbfafeffac").then(res => res.json()).then(data => {
+            return data.items//all products
         });
     //assign products to an array
     const allproducts = await productApi;
