@@ -174,6 +174,10 @@ export default class SProduct {
             //add event listener to products card
             Product.setEventListener(allproducts);
 
+            if (CartLogic.totalQuantity() > 0) {
+                CartLogic.productBtnsCheck();
+            }
+
         }).catch(err => console.log(err));
     }
 
