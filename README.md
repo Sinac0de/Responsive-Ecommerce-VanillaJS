@@ -24,7 +24,6 @@
 * All the images are optimized using tinypng website.
 
 # <a name="technologies-used"></a>Technologies Used
-* Axios
 * SwiperJs
 * LocalStorage
 * Vanilla Js
