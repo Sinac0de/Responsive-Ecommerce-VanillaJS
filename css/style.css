@@ -38,6 +38,8 @@ body {
   font-size: var(--font-p-small);
   -webkit-tap-highlight-color: transparent;
   /*disable all highlighting backgrounds*/
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 body::-webkit-scrollbar {
