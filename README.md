@@ -1,7 +1,7 @@
 
 ![Picture](https://i.ibb.co/xYXBWFK/responsive-ecommerce-wearme.jpg)
 # Responsive-Ecommerce-VanillaJS
->A good looking fully responsive clothing ecommerce website with some cool features that is used in modern ecommerce websites.🔥
+>A visually appealing, fully responsive clothing e-commerce website with innovative features commonly found in modern e-commerce platforms. 🔥
 
 # Table of Contents
 * [Live Demo](#Live-demo)
@@ -13,15 +13,15 @@
 > Try the demo <a href="https://wearme-sina.netlify.app/">Here</a> 
 
 # <a name="key-features"></a>Key Features
-* Gets products using Api with Axios.
-* Fully Responsive.
-* Beautiful UI.
-* Ability to Search & Filter Products simultaneously.
-* Ability to Sort products based on Price, Popularity and Date.
-* Show current cart quantity Real-time.
-* Save your cart content after refreshing the page.
-* Modular programming.
-* All the images are optimized using tinypng website.
+* Retrieves products using the Axios API.
+* Fully responsive design.
+* Stunning UI.
+* Simultaneous product search and filtering capabilities.
+* Sort products by Price, Popularity, and Date.
+* Real-time display of current cart quantity.
+* Cart content persistence even after page refreshing.
+* Utilizes modular programming.
+* All images are optimized through the TinyPNG website.
 
 # <a name="technologies-used"></a>Technologies Used
 * SwiperJs
@@ -33,6 +33,4 @@
 * Flexbox & Grid
 
 # <a name="resources"></a>Resources
-* Product images are from DigiStyle.com and Digikala.com
-* Faq & About-Us pages content are from Shopify.com
-* Banner & Hero images are from various websites such as Unsplash.com
+Product images are sourced from DigiStyle.com and Digikala.com. The content for the Faq & About-Us pages is obtained from Shopify.com, and the Banner & Hero images are collected from various websites, including Unsplash.com.
